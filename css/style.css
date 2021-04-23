@@ -7,7 +7,7 @@
 /*Custom properties */
 :root {
     --ff-primary: 'Roboto', sans-serif;
-    --ff-secundary: 'Open Sans', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
 
     --ff-reg: 300;
     --ff-bold: 900;
@@ -153,7 +153,7 @@ h3 {
 .section__subtitle--about {
     background: var(--clr-accent);
     padding: .25em 1em;
-    font-family: var(--ff-secundary);
+    font-family: var(--ff-secondary);
     margin-bottom: 2em;
 }
 .section__subtitle--work {
@@ -277,7 +277,7 @@ nav {
 .portfolio {
     display: grid;
     /*grid-template-columns: repeat(3, 1fr);*/
-    /*Reactive size grid templete columns accourding the screen*/
+    /*Reactive size grid template columns according the screen*/
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
