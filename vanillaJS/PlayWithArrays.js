@@ -30,6 +30,18 @@ characters = [
     gender: 'male',
   },
 ];
+characters.push({
+  name: 'Manuel Arias',
+  height: 182,
+  mass: 87,
+  eye_color: 'brown',
+  gender: 'male',
+});
+
+console.log(characters.find((c) => c.name === 'Manuel Arias'));
+console.log(characters.findIndex((c) => c.name === 'Manuel Arias'));
+const uniqueCharacters = characters;
+console.log(uniqueCharacters);
 
 //***MAP***
 //1. Get array of all names
@@ -100,7 +112,6 @@ const isMass = characters.every((c) => c.mass > 40);
 const isAllShorter = characters.every((c) => c.height < 200);
 //4. Is every character male?
 const isAllMale = characters.every((c) => c.gender === 'male');
-console.log(isAllMale);
 
 //***SOME***
 //1. Is there at least one male character?
