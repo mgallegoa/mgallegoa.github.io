@@ -10,7 +10,7 @@ body {
 header {
     width:100%;
     background-image: url('../images/mobile/image-header.jpg');
-    height: 457px;
+    height: 537px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
@@ -19,20 +19,19 @@ ul {
     display: none;
 }
 .sunnyside__logo {
-    margin-top: 7.3%;
-    margin-left: -15%;
-    max-width: 106px;
-}
-.sunnyside__arrow {
-    margin-top: 6.5%;
-    margin-left: -15%;
-    max-height: 120px;
+    margin-top: 9%;
+    margin-left: 0%;
+    max-width: 125px;
 }
 
 .sunnyside__menu {
-    margin-left: 40%;
-    max-width: 110px;
-    max-height: 15px;
+    margin-top: 1%;
+    margin-left: 47%;
+    max-width: 150px;
+    max-height: 30px;
+}
+.sunnyside__arrow {
+    margin-top: 6%;
 }
 
 .sunnyside__title {
@@ -40,15 +39,15 @@ ul {
     text-transform: uppercase;
     letter-spacing: 7px;
     font-weight: 900;
+    font-size: 40px;
     color: hsl(0, 0%, 100%);
-    margin-top: 19.5%;
-    margin-left: -15%;
+    margin-top: 22%;
 }
 
 /* BRAND SECTION */
 .sunnyside__brand-image {
     background-image: url('../images/mobile/image-transform.jpg');
-    height: 265px;
+    height: 365px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
@@ -59,23 +58,23 @@ ul {
 .sunnyside__subtitle {
     font-family: 'Fraunces', serif;
     font-weight: 900;
-    letter-spacing: 2px;
-    margin: 53px 57px 20px 4px;
-    line-height: 35px;
+    font-size: 32px;
+    margin: 13px 30px 28px 30px;
+    line-height: 37px;
 }
 .sunnyside__brand-text {
-    margin-left: 25px;
-    margin-right: 60px;
-    margin-bottom: 29px;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 33px;
     color: hsl(213, 9%, 39%);
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 30px;
 }
 .sunnyside__learn {
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
     text-transform: uppercase;
-    margin-left: -60px;
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
 }
@@ -88,60 +87,63 @@ ul {
 }
 .sunnyside__audience-image {
     background-image: url('../images/mobile/image-stand-out.jpg');
-    height: 265px;
+    height: 365px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
-    margin-top: 55px;
+    margin-top: 107px;
 }
 .sunnyside__audience-subtitle {
     font-family: 'Fraunces', serif;
     font-weight: 900;
-    letter-spacing: 2px;
-    margin: 53px 70px 20px 20px;
-    line-height: 34px;
+    font-size: 32px;
+    margin: 13px 30px 27px 30px;
+    line-height: 37px;
 }
 .sunnyside__audience-text {
-    margin-left: 25px;
-    margin-right: 60px;
-    margin-bottom: 29px;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 32px;
     color: hsl(213, 9%, 39%);
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 30px;
 }
 
 /* GRAPHIC DESIGN */
 .sunnyside__graphic-design {
     background-image: url('../images/mobile/image-graphic-design.jpg');
-    height: 510px;
+    height: 600px;
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
-    margin-top: 57px;
+    margin-top: 67px;
     position: relative;
 }
 .sunnyside__graphic-subtitle {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     position: absolute;
-    margin-top: 340px;
-    margin-left: 65px;
+    font-size: 28px;
+    margin-top: 398px;
+    margin-left: 77px;
+    color: hsl(167, 40%, 24%);
 }
 .sunnyside__graphic-text {
-    margin-left: 16px;
-    margin-right: 70px;
+    margin-top: 462px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-bottom: 58px;
-    color: hsl(213, 9%, 39%);
+    color:hsl(167, 40%, 24%);
     position: absolute;
-    margin-top: 393px;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
 /* Photography*/
 .sunnyside__photography {
     background-image: url('../images/mobile/image-photography.jpg');
-    height: 510px;
+    height: 600px;
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -153,68 +155,65 @@ ul {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     position: absolute;
-    margin-top: 340px;
-    margin-left: 75px;
+    font-size: 28px;
+    margin-top: 399px;
+    margin-left: 87px;
 }
 .sunnyside__photography-text {
-    margin-left: 16px;
-    margin-right: 60px;
+    margin-top: 460px;
+    margin-left: 25px;
+    margin-right: 25px;
     margin-bottom: 58px;
-    color: hsl(213, 9%, 39%);
+    color: hsl(198, 62%, 26%);
     position: absolute;
-    margin-top: 393px;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 27px;
 }
 
 /* Client Testimonials*/
 .sunnyside__testimonials-title {
-    margin-top: 55px;
-    margin-left: -45px;
+    margin-top: 64px;
     margin-bottom: 0px;
     font-family: 'Fraunces', serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
     color: hsl(210, 4%, 67%);
 }
 .sunnyside__testimonials-image {
     border-radius: 50%;
-    max-width: 60px;
-    margin-top: 55px;
-    margin-left: -55px;
-    margin-bottom: 27px;
+    max-width: 70px;
+    margin-top: 64px;
+    margin-bottom: 33px;
 }
 .sunnyside__testimonials-text {
-    margin-left: 20px;
-    margin-right: 70px;
-    line-height: 26px;
+    margin-left: 27px;
+    margin-right: 27px;
+    line-height: 30px;
+    font-size: 18px;
 }
 .sunnyside__testimonials-name {
     font-family: 'Fraunces', serif;
-    margin-top: 27px;
-    margin-left: -55px;
+    margin-top: 36px;
+    font-size: 18px;
 }
 .sunnyside__testimonials-position {
     margin-top: 12px;
-    margin-left: -55px;
-    font-size: 12px;
+    font-size: 14px;
     color: hsl(210, 4%, 67%);
 }
 
 /* Galery*/
 .sunnyside__gallery-images {
-    margin-top: 83px;
+    margin-top: 100px;
     display: grid;
     gap: 0px;
     grid-template-columns: 1fr 1fr;
-    max-width: 320px;
 }
 .sunnyside__gallery-milkbottles {
     background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
-    height: 160px;
-    max-width: 160px;
+    height: 187.5px;
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -222,8 +221,7 @@ ul {
 }
 .sunnyside__gallery-orange {
     background-image: url('../images/mobile/image-gallery-orange.jpg');
-    height: 160px;
-    max-width: 160px;
+    height: 187.5px;
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -231,8 +229,7 @@ ul {
 }
 .sunnyside__gallery-cone {
     background-image: url('../images/mobile/image-gallery-cone.jpg');
-    height: 160px;
-    max-width: 160px;
+    height: 187.5px;
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -240,8 +237,7 @@ ul {
 }
 .sunnyside__gallery-cubes {
     background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
-    height: 160px;
-    max-width: 160px;
+    height: 187.5px;
     border: 0px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -250,31 +246,48 @@ ul {
 
 /* Footer */
 .sunnyside__footer {
-    background-color: hsl(168, 34%, 41%);
+    background-color: hsl(170, 34%, 69%);
     margin-top: 0px;
 }
 
 .sunnyside__logo-footer {
     margin-top: 0px;
-    margin-left: -20px;
+    margin-left: -10px;
+    padding-top: 50px;
     font-family: 'Barlow', sans-serif;
     color: hsl(167, 40%, 24%);
     font-size: 40px;
 }
 .sunnyside__footer-options {
-    margin-top: 90px;
-    display: inline;
+    padding-top: 5px;
+    display: flex;
+    color: hsl(167, 40%, 24%);
+    font-size: 20px;
+    list-style: none;
+    justify-content: center;
 }
 .sunnyside__footer-option {
-    display: inline;
+    margin-right: 45px;
+}
+.sunnyside__footer-option:hover {
+    color: hsl(0, 0%, 100%);
 }
 .sunnyside__footer-icons {
     margin-top: 50px;
-    display: inline;
+    padding-bottom: 75px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
 }
 .sunnyside__footer-icon {
     margin-top: 40px;
-    display: inline;
+    margin-right: 34px;
+}
+.sunnyside__footer-icon:hover {
+    color: hsl(0, 0%, 100%);
+}
+svg:hover {
+    fill: hsl(0, 0%, 100%);
 }
 
 .attribution { font-size: 11px; text-align: center; }
