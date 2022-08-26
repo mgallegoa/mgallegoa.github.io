@@ -1,0 +1,298 @@
+body {
+    margin: 0px;
+    border: 0px;
+    size: 18px;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    color: hsl(212, 27%, 19%);
+}
+
+header {
+    width:100%;
+    background-image: url('../images/mobile/image-header.jpg');
+    height: 457px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+}
+ul {
+    display: none;
+}
+.sunnyside__logo {
+    margin-top: 7.3%;
+    margin-left: -15%;
+    max-width: 106px;
+}
+.sunnyside__arrow {
+    margin-top: 6.5%;
+    margin-left: -15%;
+    max-height: 120px;
+}
+
+.sunnyside__menu {
+    margin-left: 40%;
+    max-width: 110px;
+    max-height: 15px;
+}
+
+.sunnyside__title {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 900;
+    color: hsl(0, 0%, 100%);
+    margin-top: 19.5%;
+    margin-left: -15%;
+}
+
+/* BRAND SECTION */
+.sunnyside__brand-image {
+    background-image: url('../images/mobile/image-transform.jpg');
+    height: 265px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+}
+.sunnyside__brand-content {
+    height: 265px;
+}
+.sunnyside__subtitle {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 53px 57px 20px 4px;
+    line-height: 35px;
+}
+.sunnyside__brand-text {
+    margin-left: 25px;
+    margin-right: 60px;
+    margin-bottom: 29px;
+    color: hsl(213, 9%, 39%);
+    line-height: 25px;
+}
+.sunnyside__learn {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: -60px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+}
+.sunnyside__brand-learn {
+    text-decoration-color: hsl(51, 100%, 49%);
+}
+/* AUDIENCE */
+.sunnyside__audience-learn {
+    text-decoration-color: hsl(7, 99%, 70%);
+}
+.sunnyside__audience-image {
+    background-image: url('../images/mobile/image-stand-out.jpg');
+    height: 265px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+    margin-top: 55px;
+}
+.sunnyside__audience-subtitle {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 53px 70px 20px 20px;
+    line-height: 34px;
+}
+.sunnyside__audience-text {
+    margin-left: 25px;
+    margin-right: 60px;
+    margin-bottom: 29px;
+    color: hsl(213, 9%, 39%);
+    line-height: 25px;
+}
+
+/* GRAPHIC DESIGN */
+.sunnyside__graphic-design {
+    background-image: url('../images/mobile/image-graphic-design.jpg');
+    height: 510px;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+    margin-top: 57px;
+    position: relative;
+}
+.sunnyside__graphic-subtitle {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 340px;
+    margin-left: 65px;
+}
+.sunnyside__graphic-text {
+    margin-left: 16px;
+    margin-right: 70px;
+    margin-bottom: 58px;
+    color: hsl(213, 9%, 39%);
+    position: absolute;
+    margin-top: 393px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* Photography*/
+.sunnyside__photography {
+    background-image: url('../images/mobile/image-photography.jpg');
+    height: 510px;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+    margin-top: 0px;
+    position: relative;
+}
+.sunnyside__photography-subtitle {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 340px;
+    margin-left: 75px;
+}
+.sunnyside__photography-text {
+    margin-left: 16px;
+    margin-right: 60px;
+    margin-bottom: 58px;
+    color: hsl(213, 9%, 39%);
+    position: absolute;
+    margin-top: 393px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* Client Testimonials*/
+.sunnyside__testimonials-title {
+    margin-top: 55px;
+    margin-left: -45px;
+    margin-bottom: 0px;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    color: hsl(210, 4%, 67%);
+}
+.sunnyside__testimonials-image {
+    border-radius: 50%;
+    max-width: 60px;
+    margin-top: 55px;
+    margin-left: -55px;
+    margin-bottom: 27px;
+}
+.sunnyside__testimonials-text {
+    margin-left: 20px;
+    margin-right: 70px;
+    line-height: 26px;
+}
+.sunnyside__testimonials-name {
+    font-family: 'Fraunces', serif;
+    margin-top: 27px;
+    margin-left: -55px;
+}
+.sunnyside__testimonials-position {
+    margin-top: 12px;
+    margin-left: -55px;
+    font-size: 12px;
+    color: hsl(210, 4%, 67%);
+}
+
+/* Galery*/
+.sunnyside__gallery-images {
+    margin-top: 83px;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 320px;
+}
+.sunnyside__gallery-milkbottles {
+    background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
+    height: 160px;
+    max-width: 160px;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+}
+.sunnyside__gallery-orange {
+    background-image: url('../images/mobile/image-gallery-orange.jpg');
+    height: 160px;
+    max-width: 160px;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+}
+.sunnyside__gallery-cone {
+    background-image: url('../images/mobile/image-gallery-cone.jpg');
+    height: 160px;
+    max-width: 160px;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+}
+.sunnyside__gallery-cubes {
+    background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
+    height: 160px;
+    max-width: 160px;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: inherit;
+}
+
+/* Footer */
+.sunnyside__footer {
+    background-color: hsl(168, 34%, 41%);
+    margin-top: 0px;
+}
+
+.sunnyside__logo-footer {
+    margin-top: 0px;
+    margin-left: -20px;
+    font-family: 'Barlow', sans-serif;
+    color: hsl(167, 40%, 24%);
+    font-size: 40px;
+}
+.sunnyside__footer-options {
+    margin-top: 90px;
+    display: inline;
+}
+.sunnyside__footer-option {
+    display: inline;
+}
+.sunnyside__footer-icons {
+    margin-top: 50px;
+    display: inline;
+}
+.sunnyside__footer-icon {
+    margin-top: 40px;
+    display: inline;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.testColor {
+
+
+    color: hsl(7, 99%, 70%);
+    color: hsl(51, 100%, 49%);
+    color: hsl(167, 40%, 24%);
+    color: hsl(198, 62%, 26%);
+    color: hsl(168, 34%, 41%);
+
+
+    color: hsl(212, 27%, 19%);
+    color: hsl(213, 9%, 39%);
+    color: hsl(232, 10%, 55%);
+    color: hsl(210, 4%, 67%);
+    color: hsl(0, 0%, 100%);
+}
