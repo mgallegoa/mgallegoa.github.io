@@ -15,25 +15,26 @@ header {
     background-size: contain;
     background-position: inherit;
 }
-ul {
-    display: none;
+.sunnyside__nav-links {
+    margin: 0px;
 }
 .sunnyside__logo {
-    margin-top: 9%;
-    margin-left: 0%;
+    margin-top: 10%;
+    margin-left: -30px;
     max-width: 125px;
+}
+.sunnyside__nav-link {
+    display: none;
+}
+.sunnyside__nav-button {
+    display: none;
 }
 
 .sunnyside__menu {
-    margin-top: 1%;
-    margin-left: 47%;
-    max-width: 150px;
+    margin-left: 185px;
+    max-width: 180px;
     max-height: 30px;
 }
-.sunnyside__arrow {
-    margin-top: 6%;
-}
-
 .sunnyside__title {
     font-family: 'Fraunces', serif;
     text-transform: uppercase;
@@ -42,6 +43,9 @@ ul {
     font-size: 40px;
     color: hsl(0, 0%, 100%);
     margin-top: 22%;
+}
+.sunnyside__arrow {
+    margin-top: 6%;
 }
 
 /* BRAND SECTION */
@@ -210,35 +214,32 @@ ul {
     display: grid;
     gap: 0px;
     grid-template-columns: 1fr 1fr;
+    border: 0px;
 }
 .sunnyside__gallery-milkbottles {
     background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
-    height: 187.5px;
-    border: 0px;
+    min-height: 187.5px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
 }
 .sunnyside__gallery-orange {
     background-image: url('../images/mobile/image-gallery-orange.jpg');
-    height: 187.5px;
-    border: 0px;
+    min-height: 187.5px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
 }
 .sunnyside__gallery-cone {
     background-image: url('../images/mobile/image-gallery-cone.jpg');
-    height: 187.5px;
-    border: 0px;
+    min-height: 187.5px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
 }
 .sunnyside__gallery-cubes {
     background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
-    height: 187.5px;
-    border: 0px;
+    min-height: 187.5px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: inherit;
@@ -308,4 +309,124 @@ svg:hover {
     color: hsl(232, 10%, 55%);
     color: hsl(210, 4%, 67%);
     color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 1024px) {
+    header {
+        background-image: url('../images/desktop/image-header.jpg');
+        width: 100%;
+        height: 800px;
+    }
+    .sunnyside__menu {
+        margin: 0px;
+        display: none;
+    }
+    .sunnyside__nav-links {
+        list-style-type: none;
+        overflow: hidden;
+        color: hsl(0, 0%, 100%);
+        margin-top: 0%;
+        width: 100%;
+    }
+    .sunnyside__logo {
+        float: left;
+        margin-top: 3.4%;
+        margin-left: -86%;
+        min-width: 168px;
+    }
+    .sunnyside__nav-link {
+        float: right;
+        margin-top: 3.4%;
+        margin-right: 2%;
+        text-align: right;
+    }
+    .sunnyside__nav-button {
+        margin-top: 0px;
+    }
+    .sunnyside__title {
+        letter-spacing: 11px;
+        font-size: 55px;
+        margin-top: 8%;
+    }
+    .sunnyside__arrow {
+        margin-top: 5%;
+    }
+
+
+    .sunnyside__main-brand {
+        display: grid;
+        column-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sunnyside__brand-image {
+        background-image: url('../images/desktop/image-transform.jpg');
+        width: 100%;
+        height: 600px;
+        grid-column-start: 2;
+    }
+    .sunnyside__brand-content {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        text-align: left;
+        margin-top: 20.5%;
+        margin-left: 19%;
+        margin-right: 10%;
+    }
+    .sunnyside__subtitle {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .sunnyside__brand-text {
+        margin-top: 35px;
+        margin-left: 5.5%;
+    }
+    .sunnyside__learn {
+        margin-top: 40px;
+        margin-left: 6.5%;
+    }
+
+    /**/
+    .sunnyside__main-audience {
+        display: grid;
+        column-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sunnyside__audience-image {
+        background-image: url('../images/desktop/image-stand-out.jpg');
+        width: 100%;
+        height: 600px;
+        margin-top: 0%;
+    }
+    .sunnyside__audience-content {
+        text-align: left;
+        margin-top: 20.5%;
+        margin-left: 11%;
+        margin-right: 15%;
+    }
+    .sunnyside__audience-subtitle {
+        font-size: 40px;
+        line-height: 46px;
+    }
+    .sunnyside__audience-text {
+        margin-top: 35px;
+        margin-left: 5.5%;
+    }
+    .sunnyside__audience-learn {
+        margin-top: 40px;
+        margin-left: 7%;
+    }
+
+    /**/
+    .sunnyside__design-photography {
+        display: grid;
+        column-gap: 0px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sunnyside__graphic-design {
+        background-image: url('../images/desktop/image-graphic-design.jpg');
+        margin-top: 0px;
+    }
+    .sunnyside__photography {
+        background-image: url('../images/desktop/image-photography.jpg');
+    }
 }
