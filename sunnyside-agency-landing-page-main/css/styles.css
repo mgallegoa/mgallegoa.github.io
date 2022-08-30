@@ -272,6 +272,7 @@ header {
 }
 .sunnyside__footer-option:hover {
     color: hsl(0, 0%, 100%);
+    cursor: pointer;
 }
 .sunnyside__footer-icons {
     margin-top: 50px;
@@ -283,12 +284,11 @@ header {
 .sunnyside__footer-icon {
     margin-top: 40px;
     margin-right: 34px;
+    fill: hsl(167, 40%, 24%);
 }
 .sunnyside__footer-icon:hover {
-    color: hsl(0, 0%, 100%);
-}
-svg:hover {
     fill: hsl(0, 0%, 100%);
+    cursor: pointer;
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -311,7 +311,7 @@ svg:hover {
     color: hsl(0, 0%, 100%);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     header {
         background-image: url('../images/desktop/image-header.jpg');
         width: 100%;
@@ -416,7 +416,7 @@ svg:hover {
         margin-left: 7%;
     }
 
-    /**/
+    /* GRAPHIC DESIGN */
     .sunnyside__design-photography {
         display: grid;
         column-gap: 0px;
@@ -428,5 +428,84 @@ svg:hover {
     }
     .sunnyside__photography {
         background-image: url('../images/desktop/image-photography.jpg');
+    }
+    .sunnyside__graphic-subtitle {
+        margin-left: 250px;
+    }
+    .sunnyside__graphic-text {
+        margin-left: 196px;
+        margin-right: 195px;
+    }
+
+    /* Photography*/
+    .sunnyside__photography-subtitle {
+        margin-left: 266px;
+    }
+    .sunnyside__photography-text {
+        margin-left: 197px;
+        margin-right: 191px;
+    }
+
+    /*Testimonials*/
+    .sunnyside__testimonials-title {
+        margin-top: 162px;
+        font-size: 20px;
+        letter-spacing: 5.5px;
+    }
+    .sunnyside__testimonials-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .sunnyside__testimonials-image {
+        margin-top: 80px;
+    }
+    .sunnyside__testimonials-text {
+        margin-top: 24px;
+        margin-left: 20px;
+        margin-right: 16px;
+        line-height: 31.5px;
+    }
+    .sunnyside__testimonials-name {
+        margin-top: 69px;
+        margin-left: -15px;
+        font-size: 19px;
+    }
+    .sunnyside__testimonials-position {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    
+    /* Galery*/
+    .sunnyside__gallery-images {
+        margin-top: 165px;
+        display: grid;
+        gap: 0px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border: 0px;
+    }
+    .sunnyside__gallery-milkbottles {
+        background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+        min-height: 447px;
+    }
+    .sunnyside__gallery-orange {
+        background-image: url('../images/desktop/image-gallery-orange.jpg');
+    }
+    .sunnyside__gallery-cone {
+        background-image: url('../images/desktop/image-gallery-cone.jpg');
+    }
+    .sunnyside__gallery-cubes {
+        background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+    }
+
+    
+    /* Footer */
+    .sunnyside__logo-footer {
+        margin-left: -11px;
+        padding-top: 60px;
+    }
+    .sunnyside__footer-option {
+        margin-right: 45px;
     }
 }
