@@ -15,23 +15,43 @@ header {
     background-size: contain;
     background-position: inherit;
 }
-.sunnyside__nav-links {
-    margin: 0px;
-}
 .sunnyside__logo {
-    margin-top: 10%;
-    margin-left: -30px;
+    margin-top: 8.5%;
+    margin-left: 0px;
     max-width: 125px;
 }
-.sunnyside__nav-link {
+.sunnyside__nav-links {
     display: none;
+    list-style-type: none;
+    color: hsl(213, 9%, 39%);
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    margin-top: 46px;
+    margin-left: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 23px;
+    padding-bottom: 57px;
+}
+.sunnyside__nav-link {
+    font-size: 19px;
+    padding: 17px 115px;
 }
 .sunnyside__nav-button {
-    display: none;
+    color: hsl(212, 27%, 19%);
+    margin-top: 34px;
+}
+.sunnyside__contact-button {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: hsl(51, 100%, 49%);;
+    border-radius: 30px;
+    padding: 20px 32px;
 }
 
 .sunnyside__menu {
-    margin-left: 185px;
+    margin-left: 175px;
     max-width: 180px;
     max-height: 30px;
 }
@@ -325,14 +345,13 @@ header {
         display: none;
     }
     .sunnyside__nav-links {
+        display: inline;
         color: hsl(0, 0%, 100%);
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
     }
     .sunnyside__nav {
-        display: inline;
         float: left;
         margin-top: 3.2%;
         font-size: 18px;
@@ -345,31 +364,33 @@ header {
         max-width:100%;
         height:33px;
     }
+    .sunnyside__link-about {
+        margin-left: 48.5%;
+    }
     .sunnyside__nav-link {
-        float: right;
-        padding-left: 5px;
-        margin-top: 3.5%;
-        margin-right: 45px;
+        display: inline;
+        float: left;
+        margin-top: 2.3%;
+        padding-left: 13px;
+        padding-right: 34px;
     }
     .sunnyside__nav-button {
-        float: right;
-        font-family: 'Fraunces', serif;
-        color: hsl(212, 27%, 19%);
+        display: inline;
+        float: left;
+        padding: 0px;
+        margin-left: 25px;
         margin-top: 3.5%;
-        margin-right: 47px;
+        margin-right: 17px;
         height: 50px;
     }
     .sunnyside__contact-button {
-        text-transform: uppercase;
-        font-size: 15px;
         background-color: hsl(0, 0%, 100%);
-        border-radius: 30px;
-        padding: 20px 32px;
     }
     .sunnyside__title {
         letter-spacing: 11px;
         font-size: 55px;
-        margin-top: 6.5%;
+        margin-top: 0px;
+        padding-top: 13.5%;
     }
     .sunnyside__arrow {
         margin-top: 5%;
