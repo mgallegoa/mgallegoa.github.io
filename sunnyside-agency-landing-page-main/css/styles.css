@@ -33,6 +33,16 @@ header {
     padding-top: 23px;
     padding-bottom: 57px;
 }
+.sunnyside__nav-triangle {
+    display: none;
+    position: absolute;
+    height:47px;
+    width: 246px;
+    fill: hsl(0, 0%, 100%);
+    margin-top: 0px;
+    margin-left: 104.5px;
+    padding: 0px;
+}
 .sunnyside__nav-link {
     font-size: 19px;
     padding: 17px 115px;
