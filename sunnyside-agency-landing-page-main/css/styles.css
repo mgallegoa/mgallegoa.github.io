@@ -90,7 +90,7 @@ a {
     background-image: url('../images/mobile/image-transform.jpg');
     height: 365px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
 }
 .sunnyside__brand-content {
@@ -131,7 +131,7 @@ a {
     background-image: url('../images/mobile/image-stand-out.jpg');
     height: 365px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
     margin-top: 107px;
 }
@@ -157,7 +157,7 @@ a {
     height: 600px;
     border: 0px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
     margin-top: 67px;
     position: relative;
@@ -188,7 +188,7 @@ a {
     height: 600px;
     border: 0px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
     margin-top: 0px;
     position: relative;
@@ -262,28 +262,28 @@ a {
     background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
     min-height: 187.5px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
 }
 .sunnyside__gallery-orange {
     background-image: url('../images/mobile/image-gallery-orange.jpg');
     min-height: 187.5px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
 }
 .sunnyside__gallery-cone {
     background-image: url('../images/mobile/image-gallery-cone.jpg');
     min-height: 187.5px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
 }
 .sunnyside__gallery-cubes {
     background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
     min-height: 187.5px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
     background-position: inherit;
 }
 
