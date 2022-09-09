@@ -87,11 +87,8 @@ a {
 
 /* BRAND SECTION */
 .sunnyside__brand-image {
-    background-image: url('../images/mobile/image-transform.jpg');
-    height: 365px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inherit;
+    width: 100%;
+    height: 100%;
 }
 .sunnyside__brand-content {
     height: 265px;
@@ -100,7 +97,7 @@ a {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     font-size: 32px;
-    margin: 13px 30px 28px 30px;
+    margin: 61px 30px 28px 30px;
     line-height: 37px;
 }
 .sunnyside__brand-text {
@@ -128,18 +125,15 @@ a {
     text-decoration-color: hsl(7, 99%, 70%);
 }
 .sunnyside__audience-image {
-    background-image: url('../images/mobile/image-stand-out.jpg');
-    height: 365px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inherit;
-    margin-top: 107px;
+    width: 100%;
+    height: 100%;
+    margin-top: 109px;
 }
 .sunnyside__audience-subtitle {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     font-size: 32px;
-    margin: 13px 30px 27px 30px;
+    margin: 63px 30px 27px 30px;
     line-height: 37px;
 }
 .sunnyside__audience-text {
@@ -258,33 +252,20 @@ a {
     grid-template-columns: 1fr 1fr;
     border: 0px;
 }
+.sunnyside__gallery-picture {
+    height: 186px;
+}
 .sunnyside__gallery-milkbottles {
-    background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
-    min-height: 187.5px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inherit;
+    width: 100%;
 }
 .sunnyside__gallery-orange {
-    background-image: url('../images/mobile/image-gallery-orange.jpg');
-    min-height: 187.5px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inherit;
+    width: 100%;
 }
 .sunnyside__gallery-cone {
-    background-image: url('../images/mobile/image-gallery-cone.jpg');
-    min-height: 187.5px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inherit;
+    width: 100%;
 }
 .sunnyside__gallery-cubes {
-    background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
-    min-height: 187.5px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: inherit;
+    width: 100%;
 }
 
 /* Footer */
@@ -294,16 +275,17 @@ a {
 }
 
 .sunnyside__logo-footer {
-    margin-top: 0px;
-    margin-left: -14px;
-    padding-top: 52px;
+    margin-top: 0%;
+    margin-left: -11px;
+    padding-top: 56px;
     font-family: 'Barlow', sans-serif;
     color: hsl(167, 40%, 24%);
-    font-size: 37px;
-    letter-spacing: 1px;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 .sunnyside__footer-options {
-    padding-top: 12px;
+    padding-top: 14px;
     display: flex;
     font-size: 18px;
     list-style: none;
@@ -428,10 +410,9 @@ a {
         display: grid;
         column-gap: 0px;
         grid-template-columns: 1fr 1fr;
+        height: 599px;
     }
     .sunnyside__brand-image {
-        background-image: url('../images/desktop/image-transform.jpg');
-        width: 100%;
         height: 600px;
         grid-column-start: 2;
     }
@@ -440,21 +421,22 @@ a {
         grid-column-start: 1;
         text-align: left;
         margin-top: 20.5%;
-        margin-left: 19%;
+        margin-left: 18.8%;
         margin-right: 10%;
     }
     .sunnyside__subtitle {
-        font-size: 40px;
-        line-height: 46px;
+        font-size: 41px;
+        line-height: 49px;
+        margin-top: 2.3%;
     }
     .sunnyside__brand-text {
-        margin-top: 35px;
+        margin-top: 31px;
         margin-left: 5.5%;
         margin-bottom: 8.3%;
     }
     .sunnyside__learn {
         margin-top: 40px;
-        margin-left: 6.8%;
+        margin-left: 7.5%;
     }
 
     /**/
@@ -464,9 +446,6 @@ a {
         grid-template-columns: 1fr 1fr;
     }
     .sunnyside__audience-image {
-        background-image: url('../images/desktop/image-stand-out.jpg');
-        width: 100%;
-        height: 600px;
         margin-top: 0%;
     }
     .sunnyside__audience-content {
@@ -476,13 +455,15 @@ a {
         margin-right: 15%;
     }
     .sunnyside__audience-subtitle {
-        font-size: 40px;
-        line-height: 46px;
+        font-size: 41px;
+        line-height: 49px;
+        margin-top: 2.3%;
     }
     .sunnyside__audience-text {
-        margin-top: 35px;
+        margin-top: 31px;
         margin-left: 5.5%;
         margin-bottom: 8%;
+        margin-right: 10%;
     }
     .sunnyside__audience-learn {
         margin-top: 40px;
@@ -512,7 +493,7 @@ a {
 
     /* Photography*/
     .sunnyside__photography-subtitle {
-        margin-left: 266px;
+        margin-left: 263px;
     }
     .sunnyside__photography-text {
         margin-left: 197px;
@@ -554,29 +535,18 @@ a {
     
     /* Galery*/
     .sunnyside__gallery-images {
-        margin-top: 165px;
+        margin-top: 163px;
         display: grid;
         gap: 0px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         border: 0px;
-    }
-    .sunnyside__gallery-milkbottles {
-        background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
-        min-height: 447px;
-    }
-    .sunnyside__gallery-orange {
-        background-image: url('../images/desktop/image-gallery-orange.jpg');
-    }
-    .sunnyside__gallery-cone {
-        background-image: url('../images/desktop/image-gallery-cone.jpg');
-    }
-    .sunnyside__gallery-cubes {
-        background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+        height: 447px;
     }
 
     
     /* Footer */
     .sunnyside__logo-footer {
+        margin-top: 0%;
         margin-left: -11px;
         padding-top: 60px;
     }
