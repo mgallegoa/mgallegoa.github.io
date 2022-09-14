@@ -252,6 +252,9 @@ a {
     grid-template-columns: 1fr 1fr;
     border: 0px;
 }
+.sunnyside__gallery-title {
+    display: none;
+}
 .sunnyside__gallery-picture {
     height: 186px;
 }
