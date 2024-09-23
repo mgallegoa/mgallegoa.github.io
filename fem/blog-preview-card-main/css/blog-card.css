@@ -1,0 +1,71 @@
+html {
+  font-size: 62.5%;
+  tab-size: 4 !important;
+}
+.body {
+  margin: 0;
+  border: 0;
+  background: hsl(47, 88%, 63%);
+  color: black;
+  /* figtree fonts*/
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6rem;
+
+  /* Using grid to center the card */
+  display: grid;
+  place-items: center; /* Center both horizontally and vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.card {
+  background-color: white;
+  max-width: 300px;
+  border: 0.1em, solid, black;
+  border-radius: 5%;
+  box-shadow: 8px 8px 0px 0 black;
+  padding: 1em 1em;
+}
+.card__header {
+  margin: 0;
+  width: 300px;
+  height: 201px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6%;
+}
+.card__image {
+  width: 363px;
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Position the image absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+}
+.card__button {
+  margin-top: 1.5em;
+  padding: 0.5em 1em;
+  border: 0;
+  background-color: hsl(47, 88%, 63%);
+  font-weight: bolder;
+  border-radius: 8%;
+}
+.card_date {
+  margin-top: 1em;
+  font-weight: 400;
+}
+.card_text {
+  font-weight: 300;
+}
+.card__footer {
+  margin-top: 1.5em;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+.card__fotter-avatar {
+  margin-right: 0.7em;
+  max-width: 40px;
+}
