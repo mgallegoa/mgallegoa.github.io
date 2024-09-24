@@ -47,8 +47,8 @@ html {
   margin-left: 2px;
 }
 .card__button {
-  margin-top: 2.4rem;
-  padding: 0.8rem 1.2rem;
+  margin-top: 2.3rem;
+  padding: 0.7rem 1.3rem;
   border: 0;
   background-color: hsl(47, 88%, 63%);
   border-radius: 10%;
@@ -88,7 +88,8 @@ html {
     max-width: 34rem;
   }
   .card__button {
-    padding: 0.8rem 1.5rem;
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
   }
   .card_date {
     margin-top: 1.5rem;
