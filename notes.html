@@ -1,0 +1,40 @@
+<<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Notes</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <ul>
+      <li>Linux:</li>
+      <ol>
+        <li>Show the screen resolution: xrandr -q</li>
+        <li>
+          Program to record OBS Studio : ffmpeg(x11grab for other Display
+          Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v 1M
+          /home/manuel/Documents/telescope-media-file.mp4
+        </li>
+        <li>
+          Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4 output.gif
+        </li>
+      </ol>
+      <li>Develop:</li>
+      <ol>
+        <li>
+          Indentation: Tabs for identation, spaces for alignment
+          https://lea.verou.me/blog/2012/01/why-tabs-are-clearly-superior/
+        </li>
+        <li>Fonts to develop : DroidSansM Nerd Font</li>
+        <li>
+          font-size: rem width: % in combination with a max-width, ch height:
+          question your self "do i rely need to set height" if yes -> use a
+          min-height padding/margin: rem or em, kevin often uses em for padding
+          of buttons media queries: em. px only for little things like shadows,
+          borders etc.
+        </li>
+      </ol>
+    </ul>
+  </body>
+</html>
