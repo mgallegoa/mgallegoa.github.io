@@ -1,19 +1,17 @@
 html {
   font-size: 62.5%;
   tab-size: 4 !important;
-}
-.body {
-  margin: 0;
-  border: 0;
-  background: hsl(47, 88%, 63%);
-  color: black;
   /* figtree fonts*/
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.5rem;
-
+}
+.body {
+  margin: 0;
+  border: 0;
+  background: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 42%);
   /* Using grid to center the card */
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
@@ -22,22 +20,23 @@ html {
 
 .card {
   background-color: white;
-  max-width: 304px;
-  border: 0.1em, solid, black;
+  max-width: 28rem;
+  border: 0.1rem, solid, black;
   border-radius: 5%;
   box-shadow: 8px 8px 0px 0 black;
-  padding: 1.5em 1.5em;
+  padding: 2.2rem;
 }
 .card__header {
   margin: 0;
   width: 100%;
-  height: 220px;
+  /* height: 202px; */
+  height: 20.2rem;
   overflow: hidden;
   position: relative;
-  border-radius: 6%;
+  border-radius: 4%;
 }
 .card__image {
-  width: 363px;
+  width: 335px;
   height: auto; /* Maintain aspect ratio */
   position: absolute; /* Position the image absolutely */
   top: 50%; /* Center vertically */
@@ -45,33 +44,56 @@ html {
   transform: translate(-50%, -50%); /* Adjust position */
 }
 .card__button {
-  margin-top: 1.5em;
-  padding: 0.5em 1em;
+  margin-top: 2.4rem;
+  padding: 0.5rem 1.2rem;
   border: 0;
   background-color: hsl(47, 88%, 63%);
-  font-weight: bolder;
-  border-radius: 8%;
+  border-radius: 10%;
+  color: hsl(0, 0%, 7%);
 }
 .card_date {
-  margin-top: 1em;
-  font-weight: lighter;
+  margin-top: 1.3rem;
+  font-size: 1.2rem;
+}
+.card__title {
+  margin-top: 2rem;
+  color: hsl(0, 0%, 7%);
+  font-size: 2rem;
 }
 .card_text {
-  font-weight: lighter;
+  font-size: 1.4rem;
 }
 .card__footer {
-  margin-top: 1.5em;
-  font-weight: bolder;
+  color: hsl(0, 0%, 7%);
   display: flex;
   align-items: center;
+  margin-top: 3.2rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 .card__fotter-avatar {
   margin-right: 0.7em;
-  max-width: 40px;
+  max-width: 33px;
 }
 
 @media (min-width: 600px) {
   .card {
-    max-width: 367px;
+    max-width: 34rem;
+  }
+  .card__button {
+    margin-top: 3rem;
+  }
+  .card_date {
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+  }
+  .card__title {
+    font-size: 2.4rem;
+  }
+  .card_text {
+    font-size: 1.6rem;
+  }
+  .card__footer {
+    margin-top: 3rem;
   }
 }
