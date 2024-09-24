@@ -59,6 +59,7 @@ html {
 .card__date {
   margin-top: 1.5rem;
   font-size: 1.2rem;
+  font-weight: bolder;
 }
 .card__title {
   margin-top: 1.5rem;
@@ -85,13 +86,16 @@ html {
   margin-right: 0.9em;
   max-width: 3.3rem;
 }
+.card__avatar-name {
+  margin: 0;
+}
 
 @media (min-width: 600px) {
   .card {
     max-width: 34rem;
   }
   .card__button {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .card__date {
     margin-top: 1.3rem;
