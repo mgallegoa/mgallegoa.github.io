@@ -33,7 +33,7 @@ html {
   height: 20.2rem;
   overflow: hidden;
   position: relative;
-  border-radius: 4%;
+  border-radius: 6%;
 }
 .card__image {
   width: 335px;
@@ -61,7 +61,7 @@ html {
   font-size: 1.2rem;
 }
 .card__title {
-  margin-top: 1.7rem;
+  margin-top: 1.5rem;
   color: hsl(0, 0%, 7%);
   font-size: 2rem;
 }
@@ -88,18 +88,20 @@ html {
     max-width: 34rem;
   }
   .card__button {
-    margin-top: 2.4rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .card_date {
     margin-top: 1.5rem;
     font-size: 1.4rem;
   }
   .card__title {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
     font-size: 2.4rem;
   }
   .card_text {
     font-size: 1.6rem;
+  }
+  .card__footer {
+    margin-top: 2.1rem;
   }
 }
