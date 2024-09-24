@@ -63,6 +63,7 @@ html {
 }
 .card__title {
   margin-top: 1.5rem;
+  margin-bottom: 0;
   color: hsl(0, 0%, 7%);
   font-size: 2rem;
 }
@@ -70,7 +71,7 @@ html {
   color: hsl(47, 88%, 63%);
 }
 .card__text {
-  margin-top: -5px;
+  margin-top: 1.5rem;
   font-size: 1.4rem;
   line-height: 1.5;
 }
@@ -80,14 +81,15 @@ html {
   align-items: center;
   margin-top: 2.2rem;
   font-weight: bolder;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 .card__fotter-avatar {
-  margin-right: 0.9em;
+  margin-right: 0.8em;
   max-width: 3.3rem;
 }
 .card__avatar-name {
   margin: 0;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 600px) {
@@ -106,6 +108,7 @@ html {
     font-size: 2.42rem;
   }
   .card__text {
+    margin-top: 2rem;
     font-size: 1.6rem;
   }
   .card__footer {
