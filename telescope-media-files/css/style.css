@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%;
+  tab-size: 4 !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: hsl(170, 34%, 69%);
+}
+video {
+  margin-top: 2rem;
+  width: 80%;
+}
+h2 {
+  margin-top: 2rem;
+}
