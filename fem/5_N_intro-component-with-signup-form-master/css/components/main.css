@@ -23,7 +23,6 @@
   border-radius: 10px;
   box-shadow: var(--clr-primary-form-shadow);
   padding-block: 0.5rem;
-  position: relative;
 }
 .form__input {
   margin-top: 1rem;
@@ -41,30 +40,23 @@
 .form__input:focus {
   border-color: var(--clr-accent);
 }
-.error-icon {
-  position: absolute;
-  display: none;
-  right: 2.6rem;
-}
 .error-message {
+  position: relative;
   display: none;
   color: var(--clr-primary-advice);
   font-size: 0.5rem;
   margin-top: 0.2rem;
   text-align: right;
-  margin-right: 2.5rem;
+  margin-right: 1.7rem;
+}
+.error-icon {
+  position: absolute;
+  display: none;
+  right: 0.6rem;
+  top: -2.7rem;
 }
 .form__name--error-icon {
-  top: 2.5rem;
-}
-.form__last-name--error-icon {
-  top: 8.5rem;
-}
-.form__email--error-icon {
-  top: 14.5rem;
-}
-.form__password--error-icon {
-  top: 20.3rem;
+  top: -2.7rem;
 }
 .form__button {
   margin-block: 0.9rem;
@@ -108,20 +100,12 @@
     padding-right: 9rem;
     padding-left: 2rem;
   }
+  .error-message {
+    margin-right: 2.5rem;
+  }
   .error-icon {
-    right: 3.6rem;
-  }
-  .form__name--error-icon {
-    top: 3.5rem;
-  }
-  .form__last-name--error-icon {
-    top: 9.5rem;
-  }
-  .form__email--error-icon {
-    top: 15.5rem;
-  }
-  .form__password--error-icon {
-    top: 21.7rem;
+    right: 2.6rem;
+    right: 1.7rem;
   }
   .form__button {
     margin-top: 1.1rem;

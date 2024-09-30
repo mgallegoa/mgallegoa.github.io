@@ -34,17 +34,10 @@ function validateLastName() {
 }
 function validateEmail() {
   let email = document.getElementsByName("email");
+  let errorMessageEmail = document.querySelector('[data-message="emailRegex"]');
   let errorIcon = document.querySelector('[data-icon="email"]');
-  let errorMessage = document.querySelector('[data-message="email"]');
-  let isValid = validateRequired(email[0].value);
-  toggleError(isValid, email[0], errorIcon, errorMessage);
-  if (isValid) {
-    isValid = EMAIL_REGEX.test(email[0].value);
-    let errorMessageEmail = document.querySelector(
-      '[data-message="emailRegex"]',
-    );
-    toggleError(isValid, email[0], errorIcon, errorMessageEmail);
-  }
+  let isValid = EMAIL_REGEX.test(email[0].value);
+  toggleError(isValid, email[0], errorIcon, errorMessageEmail);
   return isValid;
 }
 function validatePassword() {

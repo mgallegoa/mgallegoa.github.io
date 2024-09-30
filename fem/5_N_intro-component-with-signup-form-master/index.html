@@ -38,17 +38,17 @@
           placeholder="First Name"
           onfocusout="validateFirstName()"
         />
-        <span data-icon="firstName" class="error-icon form__name--error-icon">
-          <img
-            src="images/icon-error.svg"
-            alt="Error Icon, a red circle with a blank exclamation mark in the middle"
-          />
-        </span>
         <div
           data-message="firstName"
           class="error-message form__name--error-message"
         >
           First Name cannot be empty
+          <span data-icon="firstName" class="error-icon form__name--error-icon">
+            <img
+              src="images/icon-error.svg"
+              alt="Error Icon, a red circle with a blank exclamation mark in the middle"
+            />
+          </span>
         </div>
         <input
           class="form__input"
@@ -58,20 +58,20 @@
           placeholder="Last Name"
           onfocusout="validateLastName()"
         />
-        <span
-          data-icon="lastName"
-          class="error-icon form__last-name--error-icon"
-        >
-          <img
-            src="images/icon-error.svg"
-            alt="Error Icon, a red circle with a blank exclamation mark in the middle"
-          />
-        </span>
         <div
           data-message="lastName"
           class="error-message form__last-name--error-message"
         >
           Last Name cannot be empty
+          <span
+            data-icon="lastName"
+            class="error-icon form__last-name--error-icon"
+          >
+            <img
+              src="images/icon-error.svg"
+              alt="Error Icon, a red circle with a blank exclamation mark in the middle"
+            />
+          </span>
         </div>
         <input
           class="form__input"
@@ -81,23 +81,17 @@
           placeholder="Email Address"
           onfocusout="validateEmail()"
         />
-        <span data-icon="email" class="error-icon form__email--error-icon"
-          ><img
-            src="images/icon-error.svg"
-            alt="Error Icon, a red circle with a blank exclamation mark in the middle"
-          />
-        </span>
-        <div
-          data-message="email"
-          class="error-message form__email--error-message"
-        >
-          Email cannot be empty
-        </div>
         <div
           data-message="emailRegex"
           class="error-message form__email--error-message"
         >
           Looks like this is not an email
+          <span data-icon="email" class="error-icon form__email--error-icon"
+            ><img
+              src="images/icon-error.svg"
+              alt="Error Icon, a red circle with a blank exclamation mark in the middle"
+            />
+          </span>
         </div>
         <input
           class="form__input"
@@ -107,17 +101,19 @@
           placeholder="Password"
           onfocusout="validatePassword()"
         />
-        <span data-icon="password" class="error-icon form__password--error-icon"
-          ><img
-            src="images/icon-error.svg"
-            alt="Error Icon, a red circle with a blank exclamation mark in the middle"
-          />
-        </span>
         <div
           data-message="password"
           class="error-message form__password--error-message"
         >
           Password Name cannot be empty
+          <span
+            data-icon="password"
+            class="error-icon form__password--error-icon"
+            ><img
+              src="images/icon-error.svg"
+              alt="Error Icon, a red circle with a blank exclamation mark in the middle"
+            />
+          </span>
         </div>
         <button class="form__button" type="submit">
           Claim your free trial
