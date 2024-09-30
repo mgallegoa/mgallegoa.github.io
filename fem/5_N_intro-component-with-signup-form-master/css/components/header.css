@@ -1,0 +1,29 @@
+.header {
+  max-width: 87%;
+  margin-inline: 1.3rem;
+}
+.header__tittle {
+  margin-top: 5.7rem;
+  font-size: 1.71rem;
+}
+.header__paragraph {
+  margin-top: 1.3rem;
+  font-weight: 300;
+}
+
+@media (min-width: 900px) {
+  .header {
+    text-align: left;
+    margin-left: 7%;
+    margin-top: 30%;
+  }
+  .header__tittle {
+    margin-top: 0;
+    font-size: 3.06rem;
+    line-height: 1.12;
+  }
+  .header__paragraph {
+    max-width: 54ch;
+    margin-top: 1.8rem;
+  }
+}

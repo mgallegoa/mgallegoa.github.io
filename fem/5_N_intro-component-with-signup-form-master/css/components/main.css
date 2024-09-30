@@ -1,0 +1,137 @@
+.main {
+  max-width: 87%;
+  margin-inline: 1.3rem;
+}
+.main__try {
+  background-color: var(--clr-accent);
+  padding-inline: 3rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1rem;
+  font-size: 0.96rem;
+  border-radius: 10px;
+  box-shadow: var(--clr-primary-form-shadow);
+  font-weight: 300;
+  line-height: 1.63;
+}
+.main__try > b {
+  font-weight: 700;
+}
+.main__form {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--clr-primary-form-shadow);
+  padding-block: 0.5rem;
+  position: relative;
+}
+.form__input {
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding-block: 1.04rem;
+  padding-left: 1.1rem;
+  max-width: 85%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--clr-neutral-light-border);
+}
+.form__input--invalid {
+  border: 1px solid var(--clr-primary-advice);
+}
+.form__input:focus {
+  border-color: var(--clr-accent);
+}
+.error-icon {
+  position: absolute;
+  display: none;
+  right: 2.6rem;
+}
+.error-message {
+  display: none;
+  color: var(--clr-primary-advice);
+  font-size: 0.5rem;
+  margin-top: 0.2rem;
+  text-align: right;
+  margin-right: 2.5rem;
+}
+.form__name--error-icon {
+  top: 2.5rem;
+}
+.form__last-name--error-icon {
+  top: 8.5rem;
+}
+.form__email--error-icon {
+  top: 14.5rem;
+}
+.form__password--error-icon {
+  top: 20.3rem;
+}
+.form__button {
+  margin-block: 0.9rem;
+  background-color: var(--clr-primary-button);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  padding-inline: 2.8rem;
+  padding-top: 1.1rem;
+  padding-bottom: 0.6rem;
+  box-shadow: 0 4px var(--clr-primary-button-shadow);
+  font-size: 1.038rem;
+}
+.form__button:hover {
+  background-color: var(--clr-primary-button_hover);
+  cursor: pointer;
+}
+.form__footer {
+  color: var(--clr-neutral-light);
+  font-size: 0.5rem;
+  padding-bottom: 1rem;
+  margin-inline: auto;
+}
+.form__footer--red {
+  color: var(--clr-primary-advice);
+}
+@media (min-width: 900px) {
+  .main {
+    max-width: 89%;
+    margin-top: 0.3rem;
+    margin-left: -1rem;
+  }
+  .main__form {
+    padding-top: 1.3rem;
+    padding-bottom: 1.6rem;
+  }
+  .form__input {
+    margin-top: 1.18rem;
+    margin-left: 0;
+    padding-right: 9rem;
+    padding-left: 2rem;
+  }
+  .error-icon {
+    right: 3.6rem;
+  }
+  .form__name--error-icon {
+    top: 3.5rem;
+  }
+  .form__last-name--error-icon {
+    top: 9.5rem;
+  }
+  .form__email--error-icon {
+    top: 15.5rem;
+  }
+  .form__password--error-icon {
+    top: 21.7rem;
+  }
+  .form__button {
+    margin-top: 1.1rem;
+    margin-bottom: 1rem;
+    padding-inline: 8.5rem;
+    padding-top: 1.2rem;
+    font-size: 1.015rem;
+  }
+  .form__footer {
+    margin-inline: 4rem;
+    max-width: 80%;
+  }
+}

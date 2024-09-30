@@ -1,0 +1,55 @@
+:root {
+  --clr-primary-background: hsl(0, 100%, 74%);
+  --clr-primary-button: hsl(154, 59%, 51%);
+  --clr-primary-button_hover: hsl(154, 59%, 61%);
+  --clr-primary-form-shadow: 0 8px rgba(0, 0, 0, 12%);
+  --clr-primary-button-shadow: hsl(154, 59%, 45%);
+  --clr-primary-advice: hsl(0, 100%, 70%);
+
+  --clr-accent: hsl(248, 32%, 49%);
+
+  --clr-neutral-dark: hsl(249, 10%, 26%);
+  --clr-neutral-light: hsl(246, 25%, 77%);
+  --clr-neutral-light-border: hsl(246, 25%, 90%);
+}
+body {
+  background-color: var(--clr-primary-background);
+  background-image: url("/images/bg-intro-mobile.png");
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  display: grid;
+  row-gap: 4rem;
+  place-items: center;
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.36;
+}
+a {
+  text-decoration: none;
+}
+p {
+  max-width: 33.2ch;
+  line-height: 1.6;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 900px) {
+  .body {
+    background-image: url("/images/bg-intro-desktop.png");
+    background-position-x: 60%;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    row-gap: 0;
+    margin: 8% 8%;
+  }
+}
