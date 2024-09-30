@@ -14,7 +14,7 @@
 }
 body {
   background-color: var(--clr-primary-background);
-  background-image: url("/images/bg-intro-mobile.png");
+  background-image: url("../../images/bg-intro-mobile.png");
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -45,7 +45,7 @@ img {
 
 @media (min-width: 900px) {
   .body {
-    background-image: url("/images/bg-intro-desktop.png");
+    background-image: url("../../images/bg-intro-desktop.png");
     background-position-x: 60%;
     grid-template-columns: 1fr 1fr;
     align-items: start;
