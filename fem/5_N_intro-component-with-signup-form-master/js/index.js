@@ -62,3 +62,22 @@ function submitForm(event) {
   }
   return false;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const firstName = document.getElementById("firstName");
+  const lastName = document.getElementById("lastName");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+
+  firstName.addEventListener("focusout", () => {
+    validateFirstName();
+  });
+  lastName.addEventListener("focusout", () => {
+    validateLastName();
+  });
+  email.addEventListener("focusout", () => {
+    validateEmail();
+  });
+  password.addEventListener("focusout", () => {
+    validatePassword();
+  });
+});
