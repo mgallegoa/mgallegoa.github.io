@@ -1,0 +1,43 @@
+.files__image {
+  padding-inline: 2.2rem;
+  margin-top: 3rem;
+}
+.files__content {
+  position: relative;
+  background-color: var(--clr-primary-background-main);
+  padding-inline: 1.9rem;
+  margin-top: 5.8rem;
+}
+
+.files__tittle {
+  position: absolute;
+  margin-top: -3.8rem;
+  margin-right: 1.8rem;
+}
+.files__description {
+  padding-inline: 0.623rem;
+  padding-top: 4rem;
+  padding-bottom: 2.8rem;
+}
+
+@media (min-width: 900px) {
+  .files__image {
+    padding-inline: 25%;
+    margin-top: 4.6rem;
+  }
+  .files__content {
+    background-color: transparent;
+    margin-top: 6.1rem;
+  }
+  .files__tittle {
+    margin-left: 18rem;
+    margin-right: 20rem;
+    font-size: 2.5rem;
+  }
+  .files__description {
+    padding-top: 5.8rem;
+    padding-bottom: 3rem;
+    padding-inline: 24rem;
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,157 @@
+.footer {
+  background-color: var(--clr-primary-background-footer);
+  position: relative;
+  padding-inline: 1.8rem;
+  padding-bottom: 3rem;
+}
+.access {
+  background-color: var(--clr-primary-background);
+  box-shadow: 2px 2px 2px var(--clr-neutral-dark);
+  position: absolute;
+  margin-top: -11.3rem;
+  margin-left: -0.5rem;
+  margin-right: 1.2rem;
+  padding-top: 1rem;
+  padding-left: 0.38rem;
+  padding-right: 0.5rem;
+  padding-bottom: 2.2rem;
+  border-radius: 13px;
+}
+.access_tittle {
+  padding-top: 1.5rem;
+  font-size: 1.12rem;
+}
+.access__description {
+  padding-top: 0.9rem;
+  margin-inline: 7%;
+}
+.access__email {
+  margin-top: 1.9rem;
+}
+.access__button {
+  margin-top: 1.5rem;
+  padding-top: 0.95rem;
+  padding-bottom: 0.75rem;
+  padding-inline: 4.54rem;
+}
+.footer__logo {
+  padding-top: 15.4rem;
+  padding-left: 0.6rem;
+}
+.footer__contact {
+  margin-top: 2.5rem;
+  display: grid;
+}
+.contact__location {
+  display: flex;
+}
+.location__icon {
+  margin-top: 0.39rem;
+  height: 1.2rem;
+  margin-left: -2px;
+}
+.location__details {
+  text-align: left;
+  padding-left: 1.7rem;
+  font-size: 1rem;
+}
+.contact__phone-email {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.phone-icon {
+  height: 1.84rem;
+  margin-top: 2px;
+  margin-left: 2px;
+  padding-bottom: 1rem;
+}
+.phone__details {
+  text-align: left;
+  padding-left: 1.4rem;
+  padding-right: 10rem;
+  padding-bottom: 1rem;
+}
+.email-icon {
+  height: 1rem;
+  margin-top: 0.4rem;
+}
+.email__details {
+  text-align: left;
+  padding-left: 1.2rem;
+  padding-top: 0.19rem;
+}
+.contact__about-us {
+  margin-top: 5.3rem;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  font-size: 0.98rem;
+}
+.contact__about-us > li {
+  padding-bottom: 0.9rem;
+}
+.contact__contact-us {
+  margin-top: 2rem;
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  font-size: 0.98rem;
+}
+.contact__contact-us > li {
+  padding-bottom: 0.9rem;
+}
+.contact__social {
+  margin-top: 4.3rem;
+  display: flex;
+  justify-content: center;
+}
+.contact__social > img {
+  padding-inline: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .access {
+    margin-top: -11.5rem;
+    margin-left: 16.2rem;
+    margin-right: 18rem;
+  }
+  .access_tittle {
+    font-size: 2rem;
+  }
+  .access__description {
+    margin-inline: 6rem;
+  }
+  .access__email {
+    margin-top: 2.6rem;
+    margin-left: 1rem;
+    padding-left: 3.5rem;
+    padding-right: 17rem;
+  }
+  .access__button {
+    padding-top: 0.9rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.9rem;
+    padding-left: 1.5rem;
+    margin-left: 1.4rem;
+  }
+  .footer {
+    padding-bottom: 8rem;
+  }
+  .footer__contact {
+    grid-template-columns: 4fr 2fr 1fr 1fr 2fr;
+  }
+  .contact__phone-email {
+    margin-top: 0;
+  }
+  .contact__about-us {
+    margin-top: 0;
+  }
+  .contact__contact-us {
+    margin-top: 0;
+  }
+  .contact__social {
+    margin-top: 0;
+  }
+}

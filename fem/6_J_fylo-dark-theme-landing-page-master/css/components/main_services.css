@@ -1,0 +1,82 @@
+.services {
+  padding-top: 3.6rem;
+  padding-inline: 2.25rem;
+  background-color: var(--clr-primary-background-main);
+  display: grid;
+}
+.services__logo {
+  padding-top: 5.35rem;
+  margin: auto;
+  max-width: 21%;
+}
+.logo__secutity {
+  max-width: 18%;
+}
+.services__tittle {
+  margin-top: 2rem;
+  font-size: 1.14rem;
+}
+.services__details {
+  margin-top: 0.41rem;
+}
+
+@media (min-width: 900px) {
+  .services {
+    padding-top: 0rem;
+    padding-inline: 15rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6.4rem;
+    row-gap: 5.8rem;
+    margin-top: 11.7rem;
+  }
+  .services__logo {
+    max-width: 19%;
+    height: 37%;
+    padding-top: 0;
+  }
+  .logo__secutity {
+    margin-top: -0.22rem;
+    margin-inline: 10.2rem;
+    height: 42%;
+  }
+  .services__tittle {
+    margin-top: 1.7rem;
+    font-size: 1.25rem;
+  }
+  .services__details {
+    margin-top: 0.35rem;
+    padding-inline: 2.5rem;
+  }
+  .services__title-security {
+    margin-top: 1.31rem;
+    margin-left: -2.2rem;
+  }
+  .services__details-security {
+    margin-left: -2.2rem;
+    margin-top: 0.3rem;
+  }
+  .services__logo-collaboration {
+    margin-inline: 11.3rem;
+  }
+  .services__title-collaboration {
+    margin-top: 1.8rem;
+    margin-left: 0.9rem;
+  }
+  .services__details-collaboration {
+    margin-top: 0.2rem;
+    margin-right: -1rem;
+  }
+  .services__logo-access {
+    height: 33%;
+    margin-top: 0.25rem;
+    margin-inline: 10.3rem;
+  }
+  .services__tittle-access {
+    margin-top: 2.1rem;
+    margin-left: -0.7rem;
+  }
+  .services__details-access {
+    margin-top: 0.2rem;
+    margin-left: -0.9rem;
+  }
+}
