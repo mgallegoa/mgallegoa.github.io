@@ -70,7 +70,7 @@
 .phone__details {
   text-align: left;
   padding-left: 1.4rem;
-  padding-right: 10rem;
+  margin-right: 9rem;
   padding-bottom: 1rem;
 }
 .email-icon {
@@ -135,6 +135,7 @@
   }
   .access_tittle {
     font-size: 2rem;
+    padding-top: 1.8rem;
   }
   .access__description {
     margin-inline: 6rem;
@@ -154,7 +155,7 @@
     font-size: 0.88rem;
   }
   .footer {
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
   }
   .footer__logo {
     padding-top: 12.5rem;
