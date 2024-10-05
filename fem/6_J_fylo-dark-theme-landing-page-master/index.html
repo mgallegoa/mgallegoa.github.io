@@ -127,7 +127,10 @@
           </p>
           <a class="productive__link" href="#"
             >See how Fylo works&nbsp;&nbsp;
-            <img src="images/icon-arrow.svg" alt="Image of one arrow"
+            <img
+              class="productive__icon"
+              src="images/icon-arrow.svg"
+              alt="Image of one arrow"
           /></a>
         </div>
       </article>
@@ -210,6 +213,7 @@
         <input
           class="text--default access__email"
           type="text"
+          id="email"
           name="email"
           placeholder="email@example.com"
           value=""
@@ -217,6 +221,10 @@
         <button class="buttons--default access__button" type="button">
           Get Started For Free
         </button>
+
+        <div class="access__email--error" id="email--error">
+          Please enter a valid email address
+        </div>
       </article>
 
       <img class="footer__logo" src="images/logo.svg" alt="Image of the logo" />
@@ -260,17 +268,22 @@
         <div class="contact__social">
           <img
             class="icon"
-            src="images/icon-email.svg"
+            src="images/icon_facebook.svg"
             alt="Icon of Facebook"
           />
-          <img class="icon" src="images/icon-email.svg" alt="Icon of twitter" />
           <img
             class="icon"
-            src="images/icon-email.svg"
+            src="images/icon_twitter.svg"
+            alt="Icon of twitter"
+          />
+          <img
+            class="icon"
+            src="images/icon_instagram.svg"
             alt="Icon of Instagram"
           />
         </div>
       </div>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>

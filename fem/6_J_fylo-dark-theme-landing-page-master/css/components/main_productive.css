@@ -29,7 +29,21 @@
   padding-bottom: 4px;
   border-bottom: 1px solid var(--clr-accent);
 }
-
+.productive__link:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-light);
+  border-bottom: 1px solid var(--clr-neutral-light);
+}
+.productive__icon:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-light);
+}
+.access__email--error {
+  display: none;
+  color: var(--clr-accent-light);
+  text-align: left;
+  margin-left: 6rem;
+}
 @media (min-width: 900px) {
   .productive {
     grid-template-columns: 1fr 1fr;

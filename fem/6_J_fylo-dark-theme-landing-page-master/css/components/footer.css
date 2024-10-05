@@ -92,6 +92,11 @@
 .contact__about-us > li {
   padding-bottom: 0.9rem;
 }
+.contact__about-us > li:hover {
+  cursor: pointer;
+  font-variation-settings: "wght" 700;
+  color: var(--clr-neutral-light);
+}
 .contact__contact-us {
   margin-top: 2rem;
   list-style-type: none;
@@ -102,6 +107,11 @@
 .contact__contact-us > li {
   padding-bottom: 0.9rem;
 }
+.contact__contact-us > li:hover {
+  cursor: pointer;
+  font-variation-settings: "wght" 700;
+  color: var(--clr-neutral-light);
+}
 .contact__social {
   margin-top: 4.3rem;
   display: flex;
@@ -109,11 +119,17 @@
 }
 .contact__social > img {
   padding-inline: 0.5rem;
+  background-color: white;
+  border-radius: 45%;
+  margin-right: 0.3rem;
 }
-
+.contact__social > img:hover {
+  cursor: pointer;
+  background-color: var(--clr-accent-gradient);
+}
 @media (min-width: 900px) {
   .access {
-    margin-top: -11.5rem;
+    margin-top: -9.8rem;
     margin-left: 16.2rem;
     margin-right: 18rem;
   }
@@ -124,34 +140,57 @@
     margin-inline: 6rem;
   }
   .access__email {
-    margin-top: 2.6rem;
-    margin-left: 1rem;
-    padding-left: 3.5rem;
-    padding-right: 17rem;
+    margin-top: 2.4rem;
+    margin-left: 0rem;
+    padding-left: 2rem;
+    padding-right: 18.4rem;
   }
   .access__button {
     padding-top: 0.9rem;
-    padding-right: 1.5rem;
-    padding-bottom: 0.9rem;
-    padding-left: 1.5rem;
-    margin-left: 1.4rem;
+    padding-right: 2rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.9rem;
+    margin-left: 1.7rem;
+    font-size: 0.88rem;
   }
   .footer {
     padding-bottom: 8rem;
   }
+  .footer__logo {
+    padding-top: 12.5rem;
+    padding-left: 5.7rem;
+  }
   .footer__contact {
-    grid-template-columns: 4fr 2fr 1fr 1fr 2fr;
+    grid-template-columns: 3fr 3fr 1fr 1fr 2fr;
+    padding-left: 5.8rem;
+    margin-top: 2rem;
+  }
+  .location__details {
+    padding-left: 1.7rem;
   }
   .contact__phone-email {
     margin-top: 0;
+    margin-left: 4.5rem;
+    align-content: baseline;
+  }
+  .phone-icon {
+    height: 2.1rem;
+  }
+  .phone__details {
+    margin-left: 0.2rem;
+  }
+  .email__details {
+    margin-left: 0.3rem;
   }
   .contact__about-us {
     margin-top: 0;
   }
   .contact__contact-us {
     margin-top: 0;
+    margin-left: 1.4rem;
   }
   .contact__social {
-    margin-top: 0;
+    margin-top: 0.3rem;
+    margin-left: 2.2rem;
   }
 }

@@ -52,6 +52,10 @@ img {
   font-variation-settings: "wght" 700;
   border: 0;
 }
+.buttons--default:hover {
+  cursor: pointer;
+  background-color: var(--clr-accent);
+}
 .text--default {
   padding-top: 1.2rem;
   padding-bottom: 0.7rem;
@@ -81,7 +85,7 @@ img {
   }
   .text--default {
     padding-top: 1.2rem;
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.8rem;
     padding-left: 2rem;
     padding-right: 6rem;
     color: var(--clr-neutral-dark);
