@@ -169,6 +169,17 @@
             separates content from style, ensuring screen readers interpret the
             text correctly.
           </li>
+          <li>
+            you may enhance the experience using some attributes like: required
+            and aria-required so not just the form has a native validation
+            status but any assistive technology to be able to correctly mention
+            it; aria-labelledby and aria-describedby so assistive technology
+            would be able to give a better context on the input state when
+            focused or even when the user has an error on it; and an
+            aria-invalid="true" when it has an error state. The
+            span.text-fem-red may have an aria-live="assertive" attribute so the
+            assistive technologies may read out loud any error message.
+          </li>
         </ol>
       </section>
     </main>
