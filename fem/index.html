@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Front End Mentor projects and lessons</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1>Front End Mentor Practices - Projects and important notes</h1>
+      <section class="fem__projects">
+        <ol class="fem__order-list">
+          <li>
+            <a href="sunnyside-agency-landing-page-main/" target="_blank">
+              sunnyside-agency-landing-page-main
+            </a>
+            First FEM challenge, mobile menu, grid
+          </li>
+          <li>
+            <a href="order-summary-component-main/" target="_blank">
+              order-summary-component-main
+            </a>
+            Practice css
+          </li>
+          <li>
+            <a href="blog-preview-card-main/" target="_blank">
+              blog-preview-card-main
+            </a>
+            Background image
+          </li>
+          <li>
+            <a href="4_N_social-links-profile-main/" target="_blank">
+              4_N_social-links-profile-main
+            </a>
+            Responsive, css
+          </li>
+          <li>
+            <a
+              href="5_N_intro-component-with-signup-form-master/"
+              target="_blank"
+            >
+              5_N_intro-component-with-signup-form-master
+            </a>
+            css, JavaScript, form validations
+          </li>
+          <li>
+            <a href="6_J_fylo-dark-theme-landing-page-master/" target="_blank">
+              6_J_fylo-dark-theme-landing-page-master
+            </a>
+            Reset, css, css components, Landing page
+          </li>
+          <li>
+            <a
+              href="7_J_social-media-dashboard-with-theme-switcher-master/"
+              target="_blank"
+            >
+              7_J_social-media-dashboard-with-theme-switcher-master
+            </a>
+            SASS, Dark Theme switcher
+          </li>
+        </ol>
+      </section>
+      <section class="fem__notes">
+        <ol class="fem__notes-list">
+          <li>
+            Using a < main > tag inside the < body > of your HTML is a best
+            practice because it clearly identifies the main content of your
+            page. This helps with accessibility and improves how search engines
+            understand your content.
+          </li>
+          <li>
+            Using a full modern CSS reset is beneficial because it removes
+            default browser styling, creating a consistent starting point for
+            your design across all browsers. It helps avoid unexpected layout
+            issues and makes your styles more predictable, ensuring a uniform
+            appearance on different devices and platforms, check out this site
+            for a
+            <a href="https://www.joshwcomeau.com/css/custom-css-reset/">
+              Full modern reset</a
+            >
+          </li>
+          <li>
+            While px is useful for precise, fixed sizing, such as border-width,
+            border-radius, inline-padding, and <img /> sizes, it has
+            limitations. Pixels don't scale well with user settings or adapt to
+            different devices, which can negatively impact accessibility and
+            responsiveness. For example, using px for font sizes can make text
+            harder to read on some screens, Check this article
+            <a href="https://fedmentor.dev/posts/font-size-px/"
+              >why font-size must NEVER be in pixels</a
+            >. In contrast, relative units like rem and adjust based on the
+            user’s preferences and device settings, making your design more
+            flexible and accessible. Use px where exact sizing is needed, but
+            prefer relative units for scalable layouts. If you want a deeper
+            explanation watch this video by Kevin Powell
+            <a href="https://www.youtube.com/watch?v=_-aDOAMmDHI"
+              >CSS em and rem explained</a
+            >. Another great resource I found useful is this px to rem converter
+            based on the default font-size of 16 pixel.
+          </li>
+          <li>
+            Using position: absolute is not always best practice because it
+            removes elements from the normal document flow, making layouts
+            harder to manage and potentially causing overlap or misalignment on
+            different screen sizes. Instead, use flexible layout techniques like
+            CSS Grid or Flexbox for more responsive and maintainable designs.
+          </li>
+          <li>
+            For future project, You could download and host your own fonts using
+            @font-face improves website performance by reducing external
+            requests, provides more control over font usage, ensures consistency
+            across browsers, enhances offline availability, and avoids potential
+            issues if third-party font services become unavailable.
+            <a href="https://gwfh.mranftl.com/fonts">
+              Place to get .woff2 fonts</a
+            >
+          </li>
+          <li>
+            These < div > should really have semantic tags like headings (< h1 >
+            to < h6 >) and paragraphs (< p >) convey structure and meaning to
+            content, improving accessibility, SEO, and readability by helping
+            search engines and screen readers interpret the content.
+          </li>
+          <li>
+            Using rem or em units in @media queries is better than px because
+            they are relative units that adapt to user settings, like their
+            preferred font size. This makes your design more responsive and
+            accessible, ensuring it looks good on different devices and respects
+            user preferences.
+          </li>
+          <li>
+            Avoid using id selectors for styling in CSS because they are too
+            specific and hard to override, making your styles less flexible and
+            maintainable. Instead, use class selectors (.), which are reusable
+            and more manageable, allowing for better control over your styles
+            and easier updates.
+          </li>
+          <li>
+            Using font-display: swap in your @font-face rule improves
+            performance by showing fallback text until the custom font loads,
+            preventing a blank screen (flash of invisible text). The downside is
+            a brief flash when the font switches, but it’s usually better than
+            waiting for text to appear.
+          </li>
+          <li>
+            Line height is usually unitless to scale proportionally with the
+            font size, keeping text readable across different devices. Best
+            practice is to use a unitless value like 1.5 for flexibility. Avoid
+            using fixed units like px or %, as they don't adapt well to changes
+            in font size or layout.
+          </li>
+          <li>
+            Having a clear and descriptive alt text for images is important
+            because it helps people who use screen readers understand the
+            content, making your site more accessible. It also improves SEO, as
+            search engines use alt text to understand the image's context,
+            helping your site rank better, Check this out
+            <a
+              href="https://accessibility.huit.harvard.edu/describe-content-images"
+              >Write helpful Alt Text to describe images
+            </a>
+          </li>
+          <li>
+            This should be in lowercase < h4
+            class="content__subheading">PERFUME< /h4> and styled in CSS with
+            text-transform: uppercase;, Keeping text lowercase in HTML improves
+            accessibility and SEO. Using text-transform: uppercase; in CSS
+            separates content from style, ensuring screen readers interpret the
+            text correctly.
+          </li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
