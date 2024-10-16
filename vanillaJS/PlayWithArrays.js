@@ -1,45 +1,59 @@
 // https://www.w3schools.com/jsref/jsref_obj_array.asp
+// indexOf: return the index
+// includes: return true or false if element exist. Also for string "Hello word".includes("word");
+// indexOf: Index of element
+// findIndex: return first index element match.
+// some: if some element exist. arr.some(el => el === "custom value"). High performance.
+// every: all elements match?
+// find: first element match. Not match return undefined
+//
+// sort: order of the elements, arr.sort((a, b) => Math.abs(a) - Math.abs(b)). arr.toSorted() for new array
+//
+// filter: new array match the condition
+// map: Same length but transformed.
+// reduce: Only one value from the array
+
 let characters = new Array();
 characters = [
   {
-    name: 'Luke Skywalker',
+    name: "Luke Skywalker",
     height: 172,
     mass: 77,
-    eye_color: 'blue',
-    gender: 'male',
+    eye_color: "blue",
+    gender: "male",
   },
   {
-    name: 'Darth Vader',
+    name: "Darth Vader",
     height: 202,
     mass: 136,
-    eye_color: 'yellow',
-    gender: 'male',
+    eye_color: "yellow",
+    gender: "male",
   },
   {
-    name: 'Leia Organa',
+    name: "Leia Organa",
     height: 150,
     mass: 49,
-    eye_color: 'brown',
-    gender: 'female',
+    eye_color: "brown",
+    gender: "female",
   },
   {
-    name: 'Anakin Skywalker',
+    name: "Anakin Skywalker",
     height: 188,
     mass: 84,
-    eye_color: 'blue',
-    gender: 'male',
+    eye_color: "blue",
+    gender: "male",
   },
 ];
 characters.push({
-  name: 'Manuel Arias',
+  name: "Manuel Arias",
   height: 182,
   mass: 87,
-  eye_color: 'brown',
-  gender: 'male',
+  eye_color: "brown",
+  gender: "male",
 });
 
-console.log(characters.find((c) => c.name === 'Manuel Arias'));
-console.log(characters.findIndex((c) => c.name === 'Manuel Arias'));
+console.log(characters.find((c) => c.name === "Manuel Arias"));
+console.log(characters.findIndex((c) => c.name === "Manuel Arias"));
 const uniqueCharacters = characters;
 console.log(uniqueCharacters);
 
@@ -54,7 +68,7 @@ const arrNamesAndHeights = characters.map((c) => ({
   height: c.height,
 }));
 //4. Get array of all first names
-const arrFirstName = characters.map((c) => c.name.split(' ')[0]);
+const arrFirstName = characters.map((c) => c.name.split(" ")[0]);
 
 //***REDUCE***
 //1. Get total mass of all characters
@@ -74,7 +88,7 @@ const totalEyeColor = characters.reduce((accumulator, curValue) => {
 //4. Get total number of characters in all the character names
 const totalNumofChar = characters.reduce(
   (acc, cur) => acc + cur.name.length,
-  0
+  0,
 );
 
 //***FILTER***
@@ -83,9 +97,9 @@ const massGreater = characters.filter((c) => c.mass > 100);
 //2. Get characters with height less than 200
 const lessHeight = characters.filter((c) => c.height < 200);
 //3. Get all male characters
-const maleCharacters = characters.filter((c) => c.gender === 'male');
+const maleCharacters = characters.filter((c) => c.gender === "male");
 //4. Get all female characters
-const fameleCharacters = characters.filter((c) => c.gender === 'female');
+const fameleCharacters = characters.filter((c) => c.gender === "female");
 
 //***SORT***
 //1. Sort by mass
@@ -99,25 +113,25 @@ const sortByName = characters.sort((p, c) => {
 });
 //4. Sort by gender
 const sortByGender = characters.sort((p, c) => {
-  if (p.gender === 'female') return 1;
+  if (p.gender === "female") return 1;
   return -1;
 });
 
 //***EVERY***
 //1. Does every character have blue eyes?
-const isAllBlue = characters.every((c) => c.eye_color === 'blue');
+const isAllBlue = characters.every((c) => c.eye_color === "blue");
 //2. Does every character have mass more than 40?
 const isMass = characters.every((c) => c.mass > 40);
 //3. Is every character shorter than 200?
 const isAllShorter = characters.every((c) => c.height < 200);
 //4. Is every character male?
-const isAllMale = characters.every((c) => c.gender === 'male');
+const isAllMale = characters.every((c) => c.gender === "male");
 
 //***SOME***
 //1. Is there at least one male character?
-const isMale = characters.some((c) => c.gender === 'male');
+const isMale = characters.some((c) => c.gender === "male");
 //2. Is there at least one character with blue eyes?
-const isBlueEye = characters.some((c) => c.eye_color === 'blue');
+const isBlueEye = characters.some((c) => c.eye_color === "blue");
 //3. Is there at least one character taller than 210?
 const isTaller = characters.some((c) => c.height > 200);
 //4. Is there at least one character that has mass less than 50?
