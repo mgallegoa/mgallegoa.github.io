@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SASS detailed</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <article>
+      <ol class="sass__order-list">
+        <li>
+          Compiler sass from scss(Syntax css), icss(Indented css) to css, all
+          valid css can be write in scss
+        </li>
+        <li>
+          Variable: sass variables supported 100% css variables for 90%.
+          --botton-color , $botton-color
+        </li>
+        <li>
+          maps: $fonts-weights: ("regular": 400, "bold":900); font-weight:
+          map-get($fonts-weights, "bold")
+        </li>
+        <li>
+          Nesting: add & inside to be equal to parent. Using interpolation to
+          transform inside the parent: #{&}__paragraph
+        </li>
+        <li>Separation (partial): @import './reset'</li>
+        <li>
+          Functions (return values) similar to JS: @function
+          weight($wight-name){@return map-get($fonts-weights, $wight-name)};
+          font-weight: weight(bold)
+        </li>
+        <li>
+          Mixins (define styles): Similar to functions. @mixin
+          flexCenter($direction) { display: flex; justify-content: center;
+          align-items: center; flex-direction: $direction;} @include
+          flexCenter(row);
+        </li>
+        <li>Mixin + content : To replace values</li>
+        <li>@if : for if statement</li>
+        <li>@extend to extend a class style</li>
+        <li>
+          Math Operations: In sass we can use operation without calc(). In sass
+          we cann't mix the types 80% - 300px is not allowed
+        </li>
+      </ol>
+    </article>
+  </body>
+</html>
