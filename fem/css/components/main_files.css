@@ -53,10 +53,10 @@ td {
   text-align: left;
 }
 th {
-  background-color: #f2f2f2;
+  background-color: var(--clr-neutral-light);
   color: var(--clr-neutral-dark);
 }
 tr:hover {
-  background-color: #f1f1f1;
+  background-color: var(--clr-neutral-light);
   color: var(--clr-neutral-dark);
 }
