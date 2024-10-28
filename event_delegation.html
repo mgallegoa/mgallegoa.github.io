@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Delegation Pattern</title>
+</head>
+
+<body>
+
+  <input type="text" name="EventDelegationText" value="" placeholder="Value to Add to list">
+  <button type="button" id="AddToList">Add to list</button>
+  <ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <script>
+
+    function addToList() {
+      const text = document.getElementsByName('EventDelegationText')[0].value;
+      const listAdd = document.getElementById('itemList');
+      const element = document.createElement("li")
+      element.appendChild(document.createTextNode(text))
+      listAdd.appendChild(element)
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("AddToList").addEventListener("click", () => {
+        addToList();
+      })
+    })
+
+  </script>
+
+  <script>
+    // // Get the list of items
+    // const list = document.querySelectorAll('#itemList li');
+    // // Add click event to each li
+    // list.forEach(item => {
+    //   item.addEventListener('click', () => {
+    //     event.target.style.textDecoration = "line-through"
+    //   })
+    // })
+
+    // *************** Event delegation Pattern *********
+
+    // Get the list of items
+    const list = document.getElementById('itemList');
+    // Add click event to each li
+    list.addEventListener('click', (event) => {
+      if (event.target.matches("li")) {
+        event.target.style.textDecoration = "line-through"
+      }
+    })
+
+  </script>
+</body>
+
+</html>
