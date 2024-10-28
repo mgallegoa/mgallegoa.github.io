@@ -1,179 +1,199 @@
 <!DOCTYPE html>
-<html lang ="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" href="https://www.gravatar.com/avatar/dd43ba3e67fd9efdb57c9b60b16c4306.jpg?s=40" />
-    <!--This line is for open correctly in mobile and tablets-->
-    <meta name="viewport" content="with=device-with, initial-scale=1.0"/>
-    <title>Manuel Arias Portfolio</title>
-    <!--This line is for normalize the presentation between browsers-->
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css" integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA==" crossorigin="anonymous" />    
+<html lang="en">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="apple-touch-icon" href="https://www.gravatar.com/avatar/dd43ba3e67fd9efdb57c9b60b16c4306.jpg?s=40" />
+  <!--This line is for open correctly in mobile and tablets-->
+  <meta name="viewport" content="with=device-with, initial-scale=1.0" />
+  <title>Manuel Arias Portfolio</title>
+  <!--This line is for normalize the presentation between browsers-->
+  <link rel="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+    integrity="sha512-3icgkoIO5qm2D4bGSUkPqeQ96LS8+ukJC7Eqhl1H5B2OJMEnFqLmNDxXVmtV/eq5M65tTDkUYS/Q0P4gvZv+yA=="
+    crossorigin="anonymous" />
 
-    <link rel="stylesheet"  href="css/style.css">
-    <script src="https://kit.fontawesome.com/1044cb0376.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="./vanillaJS/indexAppServices.html" target="_blank">
-          <img src="./img/happyCode.drawio.png" alt="Manuel Lab"/>
-        </a>
-      </div>
-      <!-- <button class="nav-toggle" aria-label="taggle navigation">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/1044cb0376.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="./vanillaJS/indexAppServices.html" target="_blank">
+        <img src="./img/happyCode.drawio.png" alt="Manuel Lab" />
+      </a>
+    </div>
+    <!-- <button class="nav-toggle" aria-label="taggle navigation">
         <span class="hamburger">
         </span>
       </button>-->
-      
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">My work</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <!--Home Introduction-->
-    <section class="intro" id="home">
-      <h1 class="section__title section__title--intro">
-        Hi, I am <strong>Manuel Arias</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">Full-Stack dev - Architect</p>
-      <img class="intro__img" src="https://www.gravatar.com/avatar/dd43ba3e67fd9efdb57c9b60b16c4306.jpg?s=450" alt="A picture of Manuel Arias"/>
-    </section>
-
-    <!--My Services-->
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">What I do</h2>
-
-      <div class="services">
-        <div class="service">
-          <h3>Front-end Dev</h3>
-          <p>I worked with many front end technologies, the most relevant to mention and recently used are: HTML, CSS, JavaScript, JQuery, React, Angular, WebSockets, Docker, consuming REST Services and using GraphQL schemas to get the data from the back-end.</p>
-        </div> <!--close service-->
-
-        <div class="service">
-          <h3>Back-end Dev</h3>
-          <p>With a long experience with backend systems, the more relevant experience is working with Java using the Programing Object Orient paradigm and recently using the declarative approach to create pure functions with the most recently Java API, some backend technologies: Java and Kotlin with Spring Framework, Microsoft C#.</p>
-        </div> <!--close service-->
-
-        <div class="service">
-          <h3>Architecture</h3>
-          <p>Working with different Architectures for the systems and given the best solution for the business. I worked with the next, most used architectures: N layer, Modular Monolith, Micro services, Serverless. Working with different pipelines for CI/CD with testing.</p>
-        </div> <!--close service-->
-      </div>
-
-      <a href="#work" class="btn">My Work</a>
-
-    </section>
-
-    <!--About section-->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">Who I am</h2>
-      <p class="section__subtitle section__subtitle--about">
-        Passionate developer based in Medellín - Colombia
-      </p>
-      <div class="about-me__body">
-        <p>I have 12 years working in JavaScript (Angular, React, Vue), Java Language Develop and Oracle Database + 1 year in Microsoft C#, + 1 year with Kotlin Program Language with Android, cloud skills and too many tools around that technologies. I had the opportunity to technically lead the development teams, helping to solve difficult problems. I like to put special attention to details and quality, for making happy stakeholders. Working teaming up with business analysts, design specialists, infrastructure architects, software architects and many stakeholders of the projects.</p>
-        <p>Current interest in Serverless and Reactive Systems (Actors Model) and work on systems with a high throughput.</p>
-      </div>
-
-      <img class="about-me__img" src="https://www.gravatar.com/avatar/dd43ba3e67fd9efdb57c9b60b16c4306.jpg?s=500" alt="A picture of Manuel Arias"/>
-    </section>
-
-    <!--My Work section-->
-    <section class="my-work" id="work">
-      <h2 class="section__title section__title--work">My work</h2>
-      <p class="secction__subtitle section__subtitle--work">
-        Selection of my range work
-      </p>
-      <div class="portfolio">
-
-        <!--portfolio image 1-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio01.jpg" alt="1" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 2-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio02.jpg" alt="2" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 3-->
-        <a href="https://manuel-cart-integration.netlify.app/" class="portfolio__item" target="_blank">
-          <img src="img/portfolio03.jpg" alt="3" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 4-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio04.jpg" alt="4" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 5-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio05.jpg" alt="5" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 6-->
-        <a href="https://manuel-proxy-add-cors.herokuapp.com/" class="portfolio__item" target="_blank">
-          <img src="img/portfolio06.jpg" alt="6" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 7-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio07.jpg" alt="7" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 8-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio08.jpg" alt="8" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 9-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio09.png" alt="9" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 10-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio10.jpg" alt="10" class="portfolio__img">
-        </a>
-        
-        <!--portfolio image 11-->
-        <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
-          <img src="img/portfolio11.jpg" alt="10" class="portfolio__img">
-        </a>
-      </div>
-    </section>
-
-    <!--footer-->
-    <footer class="footer">
-      <a href="mailto:mgallegoarias@gmail.com" class="footer__link">
-        mgallegoarias@gmail.com
-      </a>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://github.com/mgallegoa">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://hub.docker.com/u/manuelarias">
-            <i class="fab fa-docker"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="http://www.linkedin.com/in/manuel-fernando-gallego-arias">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link">My work</a></li>
       </ul>
-    </footer>
+    </nav>
+  </header>
 
-  </body>
+  <!--Home Introduction-->
+  <section class="intro" id="home">
+    <h1 class="section__title section__title--intro">
+      Hi, I am <strong>Manuel Arias</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">Full-Stack dev - Architect</p>
+    <img class="intro__img" src="https://www.gravatar.com/avatar/dd43ba3e67fd9efdb57c9b60b16c4306.jpg?s=450"
+      alt="A picture of Manuel Arias" />
+  </section>
+
+  <!--My Services-->
+  <section class="my-services" id="services">
+    <h2 class="section__title section__title--services">What I do</h2>
+
+    <div class="services">
+      <div class="service">
+        <h3>Front-end Dev</h3>
+        <p>I worked with many front end technologies, the most relevant to mention and recently used are: HTML, CSS,
+          JavaScript, JQuery, React, Angular, WebSockets, Docker, consuming REST Services and using GraphQL schemas to
+          get the data from the back-end.</p>
+      </div> <!--close service-->
+
+      <div class="service">
+        <h3>Back-end Dev</h3>
+        <p>With a long experience with backend systems, the more relevant experience is working with Java using the
+          Programing Object Orient paradigm and recently using the declarative approach to create pure functions with
+          the most recently Java API, some backend technologies: Java and Kotlin with Spring Framework, Microsoft C#.
+        </p>
+      </div> <!--close service-->
+
+      <div class="service">
+        <h3>Architecture</h3>
+        <p>Working with different Architectures for the systems and given the best solution for the business. I worked
+          with the next, most used architectures: N layer, Modular Monolith, Micro services, Serverless. Working with
+          different pipelines for CI/CD with testing.</p>
+      </div> <!--close service-->
+    </div>
+
+    <a href="#work" class="btn">My Work</a>
+
+  </section>
+
+  <!--About section-->
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about">
+      Passionate developer based in Medellín - Colombia
+    </p>
+    <div class="about-me__body">
+      <p>I have 12 years working in JavaScript (Angular, React, Vue), Java Language Develop and Oracle Database + 1 year
+        in Microsoft C#, + 1 year with Kotlin Program Language with Android, cloud skills and too many tools around that
+        technologies. I had the opportunity to technically lead the development teams, helping to solve difficult
+        problems. I like to put special attention to details and quality, for making happy stakeholders. Working teaming
+        up with business analysts, design specialists, infrastructure architects, software architects and many
+        stakeholders of the projects.</p>
+      <p>Current interest in Serverless and Reactive Systems (Actors Model) and work on systems with a high throughput.
+      </p>
+    </div>
+
+    <img class="about-me__img" src="https://www.gravatar.com/avatar/dd43ba3e67fd9efdb57c9b60b16c4306.jpg?s=500"
+      alt="A picture of Manuel Arias" />
+  </section>
+
+  <!--My Work section-->
+  <section class="my-work" id="work">
+    <h2 class="section__title section__title--work">My work</h2>
+    <p class="secction__subtitle section__subtitle--work">
+      Selection of my range work
+    </p>
+    <div class="portfolio">
+
+      <!--portfolio image 1-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio01.jpg" alt="1" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 2-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio02.jpg" alt="2" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 3-->
+      <a href="https://manuel-cart-integration.netlify.app/" class="portfolio__item" target="_blank">
+        <img src="img/portfolio03.jpg" alt="3" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 4-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio04.jpg" alt="4" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 5-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio05.jpg" alt="5" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 6-->
+      <a href="https://manuel-proxy-add-cors.herokuapp.com/" class="portfolio__item" target="_blank">
+        <img src="img/portfolio06.jpg" alt="6" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 7-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio07.jpg" alt="7" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 8-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio08.jpg" alt="8" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 9-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio09.png" alt="9" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 10-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio10.jpg" alt="10" class="portfolio__img">
+      </a>
+
+      <!--portfolio image 11-->
+      <a href="./vanillaJS/indexAppServices.html" class="portfolio__item" target="_blank">
+        <img src="img/portfolio11.jpg" alt="10" class="portfolio__img">
+      </a>
+    </div>
+  </section>
+
+  <!--footer-->
+  <footer class="footer">
+    <a href="mailto:mgallegoarias@gmail.com" class="footer__link">
+      mgallegoarias@gmail.com
+    </a>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a class="social-list__link" href="https://github.com/mgallegoa">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="https://hub.docker.com/u/manuelarias">
+          <i class="fab fa-docker"></i>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="http://www.linkedin.com/in/manuel-fernando-gallego-arias">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+</body>
+
 </html>
