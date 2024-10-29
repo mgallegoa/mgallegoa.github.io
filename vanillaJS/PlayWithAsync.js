@@ -38,3 +38,28 @@ async function fetchData() {
 }
 
 fetchData();
+
+
+
+
+// Example with promises and fs
+import { readFile } from "node:fs";
+
+const pathFile = "./node_events.mjs"
+const getText = (file) => {
+  // Code with callback transformed to promise
+  new Promise((resolve, reject) => {
+    readFile(file, "utf-8", (error, data) => {
+      if (error) {
+        reject(error)
+      }
+      resolve(data)
+    })
+
+  })
+}
+
+getText(pathFile)
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error))
+
