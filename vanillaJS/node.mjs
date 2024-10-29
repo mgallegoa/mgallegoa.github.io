@@ -1,4 +1,5 @@
 // npx --> node_modules/.bin/nodemon --> npx nodemon index.js
+
 // Global variables
 // globalThis in node is global but in browser is window
 // __dirname, __filename, module, require (function)
