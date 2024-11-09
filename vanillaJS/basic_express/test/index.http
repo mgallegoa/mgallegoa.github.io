@@ -3,3 +3,11 @@ GET http://localhost:4000
 
 ###
 GET http://localhost:4000/about
+
+###
+POST http://localhost:4000
+Content-Type:application/json
+
+{
+  "message":"This message to test the middleware for post request, parsing the data to req.body"
+}
