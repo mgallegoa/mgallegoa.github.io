@@ -55,9 +55,12 @@ app.post('/', (req, res) => {
 
   res.status(201).json(req.body)
 })
+// Syntaxis like a middleware
 app.use((req, res) => {
-  res.status(404).send('<h1>Not Found</h1>')
+  res.status(404).send(`<h1>Not Found</h1> ${req.url}`)
 })
+
+// nullish coalescing (??) operator. Return right if left is  null or undefined
 const port = process.env.PORT ?? 4000
 app.listen(port, () => {
   console.log('Server running on port ', port)
