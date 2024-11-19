@@ -1,0 +1,39 @@
+{
+  "name": "basic_express_movies",
+  "version": "0.0.1",
+  "description": "Basic Node/Express server to create a REST API for movies, use zod to validate",
+  "main": "src/app_movies.js",
+  "scripts": {
+    "start": "node src/app_movies.js",
+    "dev": "nodemon src/app_movies.js",
+    "test": "node test/*",
+    "format": "prettier --write .",
+    "lint": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/mgallegoa/vanillaJS/basic_express_movies"
+  },
+  "keywords": [
+    "express",
+    "REST",
+    "API",
+    "movies",
+    "zod"
+  ],
+  "author": "mgallegoa",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.21.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.12.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  }
+}
