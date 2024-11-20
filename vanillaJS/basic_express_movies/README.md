@@ -1,13 +1,21 @@
 ### Basic Server with Express movies
 
 1. Create a basic express server
+   1.1. Configure the lintier and prettier
+   1.1. Configure zod, cors
 2. Use middle-ware to disable x-powered-by, don't send express
 3. Use a middle-ware to parse req.body to string
 4. All REST methods GET, POST, PATCH, PUT and DELETE
+5. Create the movie object schema with zod
+6. Use the command npx server ./src/web to server a page to test cors (Cross Origin Resource Sharing)
+7. Solve the cors problem from the server manual way (commented using cors package).
 
 ## Run: npm install
 
 Run the previous command to install all the dependencies.
+
+1. npm run dev
+2. npx server ./src/web
 
 ## How it was created?
 
