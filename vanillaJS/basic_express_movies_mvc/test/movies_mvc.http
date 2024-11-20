@@ -1,0 +1,29 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/movies
+
+###
+GET http://localhost:3000/movies?genre=action
+
+###
+GET http://localhost:3000/movies/123456
+
+###
+POST http://localhost:3000/movies
+Content-type: application/json
+
+{
+    "title": "Addams Family",
+    "year": 1998,
+    "director": "Crazy Addms",
+    "duration": 122,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+      "Drama"
+    ],
+    "rate": 7.3
+}
+
+

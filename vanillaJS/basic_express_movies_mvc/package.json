@@ -1,0 +1,41 @@
+{
+  "name": "basic_express_movies_mvc",
+  "version": "0.0.2",
+  "description": "Express, ES2015, cors, zod, eslint, prettier, movies json, movies bd",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "dev": "nodemon src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mgalleoa/mgallegoa.github.io/vanillaJS/basic_express_movies_mvc"
+  },
+  "keywords": [
+    "Express",
+    "ES2015",
+    "cors",
+    "zod",
+    "eslint",
+    "prettier",
+    "movies",
+    "json",
+    "movies",
+    "bd"
+  ],
+  "author": "mgallegoa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.12.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  }
+}
