@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import { movieRouter } from "./routes/movies.mjs";
+import { corsMiddleware } from "./middlewares/cors.mjs";
 
 // ---- Experimental: import JSON modules
 // import movies from "./db/movies.json" with { type: "json" };
@@ -15,6 +16,7 @@ const app = express();
 
 app.disable("x-powered-by");
 app.use(json());
+app.use(corsMiddleware());
 
 app.use("/movies", movieRouter);
 
