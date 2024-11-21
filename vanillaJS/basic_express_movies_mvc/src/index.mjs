@@ -1,33 +1,22 @@
 import express, { json } from "express";
+import { movieRouter } from "./routes/movies.mjs";
 
+// ---- Experimental: import JSON modules
+// import movies from "./db/movies.json" with { type: "json" };
+
+// ---- Import file JSON from file, using fs module
+// import fs from "node:fs";
+// const movies = JSON.parse(
+//   fs.readFileSync(import.meta.dirname + "/db/movies.json", "utf8"),
+// );
+
+// const movies = readJSON(import.meta.dirname + "/db/movies.json");
 const app = express();
 
-app.disable("powered-by");
+app.disable("x-powered-by");
 app.use(json());
 
-app.get("/movies", (req, res) => {
-  const { genre } = req.query;
-
-  res.end("ok" + genre);
-});
-
-app.get("/movies/:id", (req, res) => {
-  const { id } = req.params;
-  res.end("get request ok, id: " + id);
-});
-
-app.post("/movies", (req, res) => {
-  res.end("port request ok");
-});
-
-app.path("/movies/:id", (req, res) => {
-  const { id } = req.params;
-  res.end("patch request ok" + id);
-});
-
-app.delete("/movies", (req, res) => {
-  res.end("delete request ok");
-});
+app.use("/movies", movieRouter);
 
 const port = process.env.PORT ?? 3000;
 app.listen(port, () => console.log(`Server running in port ${port}`));
