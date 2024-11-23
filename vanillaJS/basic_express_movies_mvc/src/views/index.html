@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movies</title>
+    <style>
+      main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      article {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 0.5rem;
+      }
+      img {
+        width: 300px;
+        height: auto;
+        max-width: 100%;
+      }
+      h2 {
+        max-width: 300px;
+      }
+    </style>
+    <script type="module">
+      fetch("http://localhost:3000/movies")
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+        })
+        .then((movies) => {
+          const mainHtml = movies
+            .map((movie) => {
+              return `
+              <article data-id="${movie.id}">
+                <h2>${movie.title}</h2>
+                <img src="${movie.poster}" alt="${movie.title}">
+                <p>${movie.year}</p>
+
+                <button type="button">Delete Movie</button>
+              </article>
+              `;
+            })
+            .join("");
+
+          document.querySelector("main").innerHTML = mainHtml;
+        });
+
+      document.addEventListener("click", (event) => {
+        if (event.target.matches("button")) {
+          const article = event.target.closest("article");
+          const id = article.dataset.id;
+
+          fetch(`http://localhost:3000/movies/${id}`, {
+            method: "DELETE",
+          }).then((response) => {
+            if (response.ok) {
+              article.remove();
+            } else {
+              alert("Error deleting the movie");
+            }
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1>This pag`htest the solution for CORS restriction from the server</h1>
+    <p>Run with npm run dev and then npx server ./src/web</p>
+    <main></main>
+  </body>
+</html>
