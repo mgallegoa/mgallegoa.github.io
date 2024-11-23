@@ -1,6 +1,6 @@
-import { readJSON } from "../utils/utils.mjs";
+import { readJSON } from "../../utils/utils.mjs";
 
-const movies = readJSON(import.meta.dirname + "/../db/movies.json");
+const movies = readJSON(import.meta.dirname + "/../../db/movies.json");
 
 export class MovieModel {
   static async getAll({ genre }) {
