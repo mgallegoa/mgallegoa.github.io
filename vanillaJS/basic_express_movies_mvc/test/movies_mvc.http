@@ -38,6 +38,6 @@ Content-type: application/json
 }
 
 ###
-DELETE http://localhost:3000/movies/f900ca32-8a41-4079-a9cf-447ade2e4eb1
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 

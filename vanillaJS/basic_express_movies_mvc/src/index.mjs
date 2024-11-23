@@ -16,6 +16,7 @@ const app = express();
 
 app.disable("x-powered-by");
 app.use(json());
+// app.use(corsMiddleware({ acceptedOrigins: ["http://customhost.com"] }));
 app.use(corsMiddleware());
 
 app.use("/movies", movieRouter);

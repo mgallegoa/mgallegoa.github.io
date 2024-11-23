@@ -1,70 +1,53 @@
 import { Router } from "express";
-import { readJSON } from "../utils/utils.mjs";
 
 import { validateMovie, validatePartialMovie } from "../schemas/movies.mjs";
+import { MovieModel } from "../models/movie.mjs";
 export const movieRouter = Router();
 
-const movies = readJSON(import.meta.dirname + "/../db/movies.json");
-
-movieRouter.get("", (req, res) => {
+movieRouter.get("", async (req, res) => {
   const { genre } = req.query;
-  if (genre) {
-    const movie = movies.filter((item) =>
-      item.genre.some((g) => g.toUpperCase() === genre.toUpperCase()),
-    );
-    return res.json(movie);
-  }
+  const returnMovies = await MovieModel.getAll({ genre });
 
-  res.json(movies);
+  res.json(returnMovies);
 });
 
-movieRouter.get("/:id", (req, res) => {
+movieRouter.get("/:id", async (req, res) => {
   const { id } = req.params;
-  const movie = movies.find((item) => item.id === id);
+  const movie = await MovieModel.getById({ id });
   if (movie) {
     return res.json(movie);
   }
   res.status(404).json(`Not Found, id: ${id}`);
 });
 
-movieRouter.post("", (req, res) => {
+movieRouter.post("/", async (req, res) => {
   const result = validateMovie(req.body);
   if (result.error) {
     return res.status(422).json({ error: JSON.parse(result.error) });
   }
-  const newMovie = {
-    id: crypto.randomUUID(),
-    ...result.data,
-  };
-  movies.push(newMovie);
-  res.status(200).json(movies);
+  const allMovies = await MovieModel.create(result.data);
+
+  res.status(200).json(allMovies);
 });
 
-movieRouter.patch("/:id", (req, res) => {
+movieRouter.patch("/:id", async (req, res) => {
   const result = validatePartialMovie(req.body);
   if (result.error) {
     return res.status(422).json({ error: JSON.parse(result.error) });
   }
   const { id } = req.params;
-  const movieIndex = movies.findIndex((m) => m.id === id);
-  if (movieIndex < 0) {
-    return res.status(404).json(`Movie Not Found, with id: ${id}`);
+  const movieUpdated = await MovieModel.update({ id, data: result.data });
+  if (movieUpdated) {
+    return res.status(200).json(movieUpdated);
   }
-  const movieToUpdate = {
-    ...movies[movieIndex],
-    ...result.data,
-  };
-  movies[movieIndex] = movieToUpdate;
-  res.status(200).json(movies[movieIndex]);
+  return res.status(404).json(`Movie Not Found, with id: ${id}`);
 });
 
-movieRouter.delete("/:id", (req, res) => {
+movieRouter.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  const movieIndex = movies.findIndex((m) => m.id === id);
-  if (movieIndex < 0) {
+  const movies = await MovieModel.delete({ id });
+  if (!movies) {
     return res.status(404).json(`Movie Not Found, with id: ${id}`);
   }
-  movies.splice(movieIndex, 1);
-
   res.json(movies);
 });
