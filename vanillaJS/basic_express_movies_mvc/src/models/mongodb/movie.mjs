@@ -1,6 +1,6 @@
 import { MongoClient, ObjectId, ServerApiVersion } from "mongodb";
 const uri =
-  "mongodb+srv://user:???@cluster0.dhwmu.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://mgallegoa:n9haYTO0JktKVWIK@manuelmongodb.hrlxt.mongodb.net/?retryWrites=true&w=majority&appName=ManuelMongoDb";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -49,14 +49,14 @@ export class MovieModel {
     return db.findOne({ _id: objectId });
   }
 
-  static async create({ input }) {
+  static async create({ data }) {
     const db = await connect();
 
-    const { insertedId } = await db.insertOne(input);
+    const { insertedId } = await db.insertOne(data);
 
     return {
       id: insertedId,
-      ...input,
+      ...data,
     };
   }
 
@@ -67,13 +67,13 @@ export class MovieModel {
     return deletedCount > 0;
   }
 
-  static async update({ id, input }) {
+  static async update({ id, data }) {
     const db = await connect();
     const objectId = new ObjectId(id);
 
     const { ok, value } = await db.findOneAndUpdate(
       { _id: objectId },
-      { $set: input },
+      { $set: data },
       { returnNewDocument: true },
     );
 

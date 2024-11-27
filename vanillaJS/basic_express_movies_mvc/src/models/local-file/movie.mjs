@@ -15,7 +15,7 @@ export class MovieModel {
   static async getById({ id }) {
     return movies.find((item) => item.id === id);
   }
-  static async create(data) {
+  static async create({ data }) {
     const newMovie = {
       id: crypto.randomUUID(),
       ...data,
