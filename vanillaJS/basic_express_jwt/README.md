@@ -9,3 +9,4 @@ Prettier, EsLint
 3. db-local
 4. Cookies
 5. Encryption Hashes (salt)
+6. EJS Embedded Javascript Template

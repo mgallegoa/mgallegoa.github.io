@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Authentication example</title>
+  </head>
+  <body>
+  
+  <main>
+      <form name="registerForm" data-js="register-form">
+        <h2>Register Form</h2>
+        <label for="register-username">User name:</label>
+        <input type="text" name="register-username" data-js="register-username" value="">
+
+        <label for="register-password">Password:</label> 
+        <input type="text" name="register-password" data-js="register-password" value="">
+
+        <label for="register-passwordConfirm">Confirm:</label> 
+        <input type="text" name="register-passwordConfirm" data-js="register-passwordConfirm" value="">
+        <span data-js="register-span"></span>
+        <input type="submit" name="register" value="Register">
+      </form>
+      <form name="loginForm" data-js="login-form">
+        <h2>Login Form</h2>
+        <label for="username">User name:</label> 
+        <input type="text" name="username" data-js="login-username" value="">
+
+        <label for="password">Password:</label> 
+        <input type="text" name="password" data-js="login-password" value="">
+        <span data-js="login-span"></span>
+        <input type="submit" name="login" value="Login">
+      </form>
+  </main> 
+    <script>
+    const registerForm = document.querySelector('[data-js="register-form"]');
+
+    registerForm?.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const username = document.querySelector('[data-js="register-username"]').value;
+      const password = document.querySelector('[data-js="register-password"]').value;
+      const passwordConfirm = document.querySelector('[data-js="register-passwordConfirm"]').value;
+      if (password !== passwordConfirm) {
+        alert("Password is not equal to confirm password")
+        return
+      }
+
+      fetch("/register", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify({username, password})
+      })
+        .then(res => {
+          if(res.ok) {
+            const textRegister = document.querySelector('[data-js="register-span"]');
+            textRegister.innerText="Register Success..."
+            textRegister.style.color="green"
+            setTimeout(() => {
+              globalThis.location.href="/protected"              
+            }, 2000)
+          } else {
+            const textRegister = document.querySelector('[data-js="register-span"]');
+            textRegister.innerText="User not registered."
+            textRegister.style.color="red"
+          }
+        }
+
+        )
+    })
+     
+    const loginForm = document.querySelector('[data-js="login-form"]');
+
+    loginForm?.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const username = document.querySelector('[data-js="login-username"]').value;
+      const password = document.querySelector('[data-js="login-password"]').value;
+
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify({username, password})
+      })
+        .then(res => {
+          if(res.ok) {
+            const textLogin = document.querySelector('[data-js="login-span"]');
+            textLogin.innerText="Login Success..."
+            textLogin.style.color="green"
+            setTimeout(() => {
+              window.location.assign("/protected")              
+            }, 2000)
+          } else {
+            const textLogin = document.querySelector('[data-js="login-span"]');
+            textLogin.innerText="Not session started."
+            textLogin.style.color="red"
+          }
+        }
+
+        )
+    })
+      
+    </script>
+    
+  </body>
+</html>

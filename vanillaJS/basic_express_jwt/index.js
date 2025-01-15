@@ -3,14 +3,16 @@ import { PORT } from "./config.js";
 import { UserRepository } from "./user-repository.js";
 
 const app = express();
+app.set("view engine", "ejs");
 app.use(json());
 
 app.get("/", (req, res) => {
-  res.end("Hellow!!");
+  res.render("index", { username: "Arias" });
 });
 
 app.post("/register", async (req, res) => {
   const { username, password } = req.body;
+  console.log(username, password);
   try {
     console.log(username);
     console.log(password);
@@ -38,7 +40,9 @@ app.post("/login", async (req, res) => {
 app.post("/logout", (req, res) => {
   res.end({ id: "hi" });
 });
-app.get("/protected", (req, res) => {});
+app.get("/protected", (req, res) => {
+  res.render("protected", { username: "Arias" });
+});
 
 app.listen(PORT, () => {
   console.log("Server listen in port ", PORT);
