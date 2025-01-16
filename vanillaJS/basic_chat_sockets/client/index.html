@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Basic example for Chat with node using sockets</title>
+    <script type="module">
+      import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+
+      const socket = io();
+
+      const form = document.querySelector('[data-js="chat__form"]');
+      const input = document.querySelector('[data-js="chat__input"]');
+
+      form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (input.value) {
+          socket.emit("chat_message", input.value);
+          input.value = "";
+        }
+      });
+      const allMessages = document.querySelector('[data-js="chat__messages"]');
+      socket.on("chat_message", (message) => {
+        const item = `<li>${message}</li>`;
+        allMessages.insertAdjacentHTML("beforeend", item);
+      });
+    </script>
     <style>
       *,
       *::before,
@@ -19,7 +40,7 @@
         display: grid;
         place-content: center;
         height: 100vh;
-        padding: 36px;
+        padding: 36px 36px 100px 36px;
         grid-template-rows: 1fr;
       }
       .chat {
@@ -30,18 +51,61 @@
         height: 100%;
         position: relative;
       }
+      .chat__form {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 48px;
+        padding: 4px;
+        display: flex;
+      }
+      .chat__input {
+        border-radius: 999px;
+        border: 2px solid black;
+        margin: 4px;
+        padding: 0 8px;
+        flex: 1;
+      }
+      .chat__input:focus {
+        outline: 0;
+      }
+      .chat__form > button {
+        background: #09f;
+        color: white;
+        border: 0;
+        margin: 4px;
+        border-radius: 4px;
+      }
+      .chat__form > button:hover {
+        background: brown;
+      }
+      .chat__messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .chat__messages > li {
+        padding: 0.5rem 1rem;
+      }
+      .chat__messages > li:nth-child(odd) {
+        background: gray;
+      }
     </style>
   </head>
   <body>
     <section class="chat">
-      <form id="form">
+      <ul class="chat__messages" data-js="chat__messages"></ul>
+      <form id="form" class="chat__form" data-js="chat__form">
         <input
           type="text"
           name="message"
           placeholder="Type message"
           autocomplete="off"
+          class="chat__input"
+          data-js="chat__input"
         />
-        <button type="submit">Send</button>
+        <button type="submit" class="chat__button">Send</button>
       </form>
     </section>
   </body>
