@@ -1,6 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
+<head>
+</head>
 <body>
 
       <h1>Hi <%= username%> !!</h1>
+<form data-js="logout-form">
+          <span data-js="logout-span"></span>
+          <input type="submit" value="Logout" name="logout" data-js="logout">
+        </form>
+
+<script>
+  const logoutForm = document.querySelector('[data-js="logout-form"]');
+
+    logoutForm?.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        }
+      })
+        .then(res => {
+          if(res.ok) {
+             window.location.assign("/")              
+          } else {
+            const textLogout = document.querySelector('[data-js="logout-span"]');
+            textLogout.innerText="Error login out."
+            textLogout.style.color="red"
+          }
+        }
+
+        )
+    })
+</script>
+
 </body>
 </html>

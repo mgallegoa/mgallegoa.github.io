@@ -8,6 +8,15 @@
   <body>
   
   <main>
+      <% if (typeof username !== 'undefined') { %>
+
+        <h1>Hi <%= username %>!!, you are loged in</h1>
+        <form data-js="logout-form">
+          <span data-js="logout-span"></span>
+          <input type="submit" value="Logout" name="logout" data-js="logout">
+        </form>
+
+      <% } else { %>
       <form name="registerForm" data-js="register-form">
         <h2>Register Form</h2>
         <label for="register-username">User name:</label>
@@ -31,6 +40,7 @@
         <span data-js="login-span"></span>
         <input type="submit" name="login" value="Login">
       </form>
+      <% } %>
   </main> 
     <script>
     const registerForm = document.querySelector('[data-js="register-form"]');
@@ -102,6 +112,32 @@
         )
     })
       
+    const logoutForm = document.querySelector('[data-js="logout-form"]');
+
+    logoutForm?.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json"
+        }
+      })
+        .then(res => {
+          if(res.ok) {
+             window.location.assign("/")              
+          } else {
+            const textLogout = document.querySelector('[data-js="logout-span"]');
+            textLogout.innerText="Error login out."
+            textLogout.style.color="red"
+          }
+        }
+
+        )
+    })
+     
+
+
     </script>
     
   </body>
