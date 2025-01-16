@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic example for Chat with node using sockets</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        padding: 36px;
+        grid-template-rows: 1fr;
+      }
+      .chat {
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 350px;
+        height: 100%;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="chat">
+      <form id="form">
+        <input
+          type="text"
+          name="message"
+          placeholder="Type message"
+          autocomplete="off"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </body>
+</html>
