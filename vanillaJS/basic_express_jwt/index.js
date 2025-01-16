@@ -16,7 +16,7 @@ app.use((req, res, next) => {
     const data = jwt.verify(token, SECRET_JWT_KEY);
     req.session.user = data;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   next();
 });
