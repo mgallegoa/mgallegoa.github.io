@@ -5,8 +5,8 @@
 Prettier, EsLint
 
 1. Express
-2. JWT
+2. JWT : jsonwebtoken
 3. db-local
-4. Cookies
+4. Cookies : cookie-parser
 5. Encryption Hashes (salt)
 6. EJS Embedded Javascript Template
