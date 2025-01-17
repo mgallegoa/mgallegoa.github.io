@@ -25,7 +25,7 @@ const io = new Server(server, {
   },
 });
 
-io.on("connection", (socket) => {
+io.on("connection", async (socket) => {
   console.log("user connection");
   socket.on("disconnect", () => {
     console.log("Disconnected.");
@@ -43,6 +43,23 @@ io.on("connection", (socket) => {
     }
     io.emit("chat_message", message, result.lastInsertRowid.toString());
   });
+
+  // console.log(socket.handshake.auth);
+
+  if (!socket.recovered) {
+    // Recover the messages without connection
+    try {
+      const result = await dbTurso.execute({
+        sql: "SELECT id, content FROM messages WHERE id > ?",
+        args: [socket.handshake.auth.serverOffset ?? 0],
+      });
+      result.rows.forEach((row) => {
+        socket.emit("chat_message", row.content, row.id.toString());
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
 });
 
 const port = process.env.PORT ?? 3000;

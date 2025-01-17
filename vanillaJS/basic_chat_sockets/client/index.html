@@ -7,7 +7,12 @@
     <script type="module">
       import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-      const socket = io();
+      const socket = io({
+        auth: {
+          serverOffset: 0,
+          token: "ManuelToken",
+        },
+      });
 
       const form = document.querySelector('[data-js="chat__form"]');
       const input = document.querySelector('[data-js="chat__input"]');
@@ -20,9 +25,10 @@
         }
       });
       const allMessages = document.querySelector('[data-js="chat__messages"]');
-      socket.on("chat_message", (message) => {
+      socket.on("chat_message", (message, serverOffset) => {
         const item = `<li>${message}</li>`;
         allMessages.insertAdjacentHTML("beforeend", item);
+        socket.auth.serverOffset = serverOffset;
       });
     </script>
     <style>
