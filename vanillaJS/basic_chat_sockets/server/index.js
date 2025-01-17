@@ -14,7 +14,8 @@ export const dbTurso = createClient({
 
 await dbTurso.execute(`CREATE TABLE IF NOT EXISTS messages(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  content TEXT
+  content TEXT,
+  user TEXT
 )`);
 
 const app = express();
@@ -32,16 +33,22 @@ io.on("connection", async (socket) => {
   });
   socket.on("chat_message", async (message) => {
     let result;
+    const username = socket.handshake.auth.username ?? "anonymous";
     try {
       result = await dbTurso.execute({
-        sql: `INSERT INTO messages (content) VALUES (:msg)`,
-        args: { msg: message },
+        sql: `INSERT INTO messages (content, user) VALUES (:msg, :username)`,
+        args: { msg: message, username },
       });
     } catch (error) {
       console.log(error);
       return;
     }
-    io.emit("chat_message", message, result.lastInsertRowid.toString());
+    io.emit(
+      "chat_message",
+      message,
+      result.lastInsertRowid.toString(),
+      username,
+    );
   });
 
   // console.log(socket.handshake.auth);
@@ -50,11 +57,11 @@ io.on("connection", async (socket) => {
     // Recover the messages without connection
     try {
       const result = await dbTurso.execute({
-        sql: "SELECT id, content FROM messages WHERE id > ?",
+        sql: "SELECT id, content, user FROM messages WHERE id > ?",
         args: [socket.handshake.auth.serverOffset ?? 0],
       });
       result.rows.forEach((row) => {
-        socket.emit("chat_message", row.content, row.id.toString());
+        socket.emit("chat_message", row.content, row.id.toString(), row.user);
       });
     } catch (error) {
       console.log(error);

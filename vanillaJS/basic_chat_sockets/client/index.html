@@ -7,10 +7,24 @@
     <script type="module">
       import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
+      const getUsername = async () => {
+        const username = localStorage.getItem("username");
+        if (username) return username;
+
+        const res = await fetch(
+          "https://random-data-api.com/api/users/random_user",
+        );
+        const { username: randomUsername } = await res.json();
+
+        localStorage.setItem("username", randomUsername);
+        return randomUsername;
+      };
+
       const socket = io({
         auth: {
           serverOffset: 0,
           token: "ManuelToken",
+          username: await getUsername(),
         },
       });
 
@@ -25,8 +39,13 @@
         }
       });
       const allMessages = document.querySelector('[data-js="chat__messages"]');
-      socket.on("chat_message", (message, serverOffset) => {
-        const item = `<li>${message}</li>`;
+      socket.on("chat_message", (message, serverOffset, username) => {
+        const item = `<li>
+                        <p>${message}</p>
+                        <small>
+                          ${username}
+                        </small>
+                      </li>`;
         allMessages.insertAdjacentHTML("beforeend", item);
         socket.auth.serverOffset = serverOffset;
       });
