@@ -48,6 +48,8 @@
                       </li>`;
         allMessages.insertAdjacentHTML("beforeend", item);
         socket.auth.serverOffset = serverOffset;
+        // Scroll messages
+        allMessages.scrollTop = allMessages.scrollHeight;
       });
     </script>
     <style>
@@ -109,6 +111,10 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        overflow-y: scroll;
+        height: 100%;
+        scroll-behavior: smooth;
+        padding-bottom: 50px;
       }
       .chat__messages > li {
         padding: 0.5rem 1rem;
