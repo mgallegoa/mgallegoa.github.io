@@ -2,6 +2,20 @@ import express from "express";
 import logger from "morgan";
 import { Server } from "socket.io";
 import { createServer } from "node:http";
+import dotenv from "dotenv";
+import { createClient } from "@libsql/client";
+
+dotenv.config();
+
+export const dbTurso = createClient({
+  url: process.env.TURSO_DATABASE_URL,
+  authToken: process.env.TURSO_AUTH_TOKEN,
+});
+
+await dbTurso.execute(`CREATE TABLE IF NOT EXISTS messages(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  content TEXT
+)`);
 
 const app = express();
 const server = createServer(app);
@@ -16,8 +30,18 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("Disconnected.");
   });
-  socket.on("chat_message", (message) => {
-    io.emit("chat_message", message);
+  socket.on("chat_message", async (message) => {
+    let result;
+    try {
+      result = await dbTurso.execute({
+        sql: `INSERT INTO messages (content) VALUES (:msg)`,
+        args: { msg: message },
+      });
+    } catch (error) {
+      console.log(error);
+      return;
+    }
+    io.emit("chat_message", message, result.lastInsertRowid.toString());
   });
 });
 

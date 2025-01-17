@@ -1,6 +1,6 @@
 ### Chat using nodejs and socket.io
 
-Chat using nodejs and socket.io
+Chat using nodejs and socket.io. This use a db with Turso.
 
 ## Dev start
 
