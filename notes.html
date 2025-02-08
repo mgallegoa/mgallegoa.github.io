@@ -1,43 +1,75 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Personal Notes</title>
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <a href="fem/">Front Mentor</a>
-    <ul>
-      <li>Linux:</li>
-      <ol>
-        <li>Show the screen resolution: xrandr -q</li>
-        <li>
-          Program to record OBS Studio : ffmpeg(x11grab for other Display
-          Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v 1M
-          /home/manuel/Documents/telescope-media-file.mp4
-        </li>
-        <li>
-          Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4 output.gif
-        </li>
-      </ol>
-      <li>Develop:</li>
-      <ol>
-        <li>
-          Indentation: Tabs for indentation, spaces for alignment
-          https://lea.verou.me/blog/2012/01/why-tabs-are-clearly-superior/
-        </li>
-        <li>Fonts to develop : DroidSansM Nerd Font</li>
-        <li>
-          font-size: rem width: % in combination with a max-width, ch height:
-          question your self "do i rely need to set height" if yes -> use a
-          min-height padding/margin: rem or em, kevin often uses em for padding
-          of buttons media queries: em. px only for little things like shadows,
-          borders etc.<br />
-          .woff2 fonts<br />
-          https://gwfh.mranftl.com/fonts/finlandica?subsets=latin
-        </li>
-      </ol>
-    </ul>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Notes</title>
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <a href="fem/">Front Mentor</a>
+  <ul>
+    <li>Linux:</li>
+    <ol>
+      <li>Show the screen resolution: xrandr -q</li>
+      <li>
+        Program to record OBS Studio : ffmpeg(x11grab for other Display
+        Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v 1M
+        /home/manuel/Documents/telescope-media-file.mp4
+      </li>
+      <li>
+        Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4 output.gif
+      </li>
+    </ol>
+    <li>Develop:</li>
+    <ol>
+      <li>
+        Indentation: Tabs for indentation, spaces for alignment
+        https://lea.verou.me/blog/2012/01/why-tabs-are-clearly-superior/
+      </li>
+      <li>Fonts to develop : DroidSansM Nerd Font</li>
+      <li>
+        font-size: rem width: % in combination with a max-width, ch height:
+        question your self "do i rely need to set height" if yes -> use a
+        min-height padding/margin: rem or em, kevin often uses em for padding
+        of buttons media queries: em. px only for little things like shadows,
+        borders etc.<br />
+        .woff2 fonts<br />
+        https://gwfh.mranftl.com/fonts/finlandica?subsets=latin
+      </li>
+    </ol>
+    <li>Docker:</li>
+    <ol>
+      <li> Show if docker is running well:sudo docker run hello-world </li>
+      <li>Add user to docker group: sudo groupadd docker -> sudo usermod -aG docker $USER -> newgrp docker (to Restart
+        docker group session) </li>
+      <li>Dockerfile ->build (image) -> run (container)</li>
+      <li>docker pull imageName : Download the image but not run it</li>
+      <li>docker build -t imageName . : Create an image from Dockerfile</li>
+      <li>docker run --name myPersonalImageName imageName : Download(if necessary) the image and run it</li>
+      <li>docker run -d imageName : Run in detached mode</li>
+      <li>Run docker in interactive mode docker run -it --rm alpine sh (docker run -it --rm alpine sh -c "apk add
+        --no-cache bash && bash")</li>
+      <li>docker images : show the images, use | head to show the last</li>
+      <li>docker ps : show all images. -a for stopped and running containers</li>
+      <li>docker start idContainer : start a docker stopped container.docker stop idContainer</li>
+      <li>docker logs -f idContainer : show the log for the container. Can use containerName</li>
+      <li>docker exec -it idContainer bash : Run a command in running container</li>
+      <li>docker run -dit --name my_alpine alpine-bash # Run the container in detach mode
+        docker exec -it my_alpine bash # Attach to the container
+      </li>
+      <p />
+      <li>docker logs -f : Show and wait for logs</li>
+      <p />
+      <li>docker run -dp 5000:3000 imageName : Run in port 5000 the app inside container in port 3000</li>
+      <li>docker run -d -v /media/manuel/Datos/:/etc/todos -p 5000:3000 imageName : Shared a volume</li>
+      <p />
+      Volumes to develop in container without re-build the image
+      <li>docker run -d -v /media/manuel/Datos/:/etc/todos -p 5000:3000 imageName : Shared a volume</li>
+    </ol>
+  </ul>
+</body>
+
 </html>
