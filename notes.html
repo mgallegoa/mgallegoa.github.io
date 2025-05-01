@@ -67,7 +67,14 @@
       <li>docker run -d -v /media/manuel/Datos/:/etc/todos -p 5000:3000 imageName : Shared a volume</li>
       <p />
       Volumes to develop in container without re-build the image
-      <li>docker run -d -v /media/manuel/Datos/:/etc/todos -p 5000:3000 imageName : Shared a volume</li>
+      <li>docker run -dp 5555:5174 --name react-ts-list-app -v
+        /media/manuel/Datos/mgallegoa/conceptsProbes/react-ts-list-app/src:/app/react-ts-list-app/src
+        manuelarias/react-ts-list:v1 : Create a container and share a volume for development</li>
+
+      <li>docker builder prune : to purge the docker builder cache</li>
+
+
+
     </ol>
   </ul>
 </body>
