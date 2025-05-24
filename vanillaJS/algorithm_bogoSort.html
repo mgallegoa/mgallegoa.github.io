@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Bogosort Animation</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #array {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .item {
+      width: 40px;
+      height: 40px;
+      background: lightcoral;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .sorted {
+      background: lightgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bogosort Visualizer</h1>
+  <div id="array"></div>
+  <p id="status">Shuffles: 0</p>
+
+  <script>
+    // const array = [3, 2, 1, 4, 5, 7, 6, 8, 9, 0];
+    const array = [3, 2, 1, 4];
+    let shuffleCount = 0;
+    const container = document.getElementById("array");
+    const status = document.getElementById("status");
+
+    function isSorted(arr) {
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i - 1] > arr[i]) return false;
+      }
+      return true;
+    }
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+
+    function render(arr, sorted = false) {
+      container.innerHTML = "";
+      arr.forEach(num => {
+        const div = document.createElement("div");
+        div.className = "item" + (sorted ? " sorted" : "");
+        div.textContent = num;
+        container.appendChild(div);
+      });
+    }
+
+    function bogosortVisual(arr) {
+      if (isSorted(arr)) {
+        render(arr, true);
+        status.textContent = `Sorted in ${shuffleCount} shuffles 🎉`;
+        return;
+      }
+
+      shuffle(arr);
+      shuffleCount++;
+      render(arr);
+      status.textContent = `Shuffles: ${shuffleCount}`;
+
+      setTimeout(() => bogosortVisual(arr), 600); // delay between shuffles
+    }
+
+    render(array);
+    setTimeout(() => bogosortVisual(array), 900);
+  </script>
+</body>
+
+</html>
