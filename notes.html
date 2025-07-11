@@ -40,6 +40,19 @@
         https://gwfh.mranftl.com/fonts/finlandica?subsets=latin
       </li>
     </ol>
+    <li>Architeture:</li>
+    <ol>
+      <li>
+        MVC: Model View Controller
+      </li>
+      <li>Hexagonal - Adapters and Ports : How to organize the app, separate business logic from others (DB, API, User
+        Interfaces) - Multiples in/out ports<br />
+        4 Parts: 1. Domain (Entities, business logic) 2. Inbound ports (Interfaces) 3. Outbound port (Interfaces DB,
+        email, etc) 4. Adapters, concrete implementations of interfaces
+      </li>
+      <li>
+      </li>
+    </ol>
     <li>Docker:</li>
     <ol>
       <li> Show if docker is running well:sudo docker run hello-world </li>
@@ -184,10 +197,31 @@
         MergeSort: O(n log n)
       </li>
       <li>
-        linearSearch: O(n)
+        linearSearch: O(n)<br />
         binarySearch: O(log n)
       </li>
-
+      <li>
+        Priority Queue: Data Structure allow find the max/min element in constant time, support following
+        operations:<br />
+        1. insert(key)<br />
+        2. deleteMax/deleteMin: remove key<br />
+        3. getMax/getMin: get the key.<br />
+      </li>
+      <li>
+        Complete Binary Tree: Is a Binary Tree where all levels are completed except last level AND last level has a
+        node in such a way that left side is never empty.
+      </li>
+      <li>
+        Representation of Binary Heap:<br />
+        1. Is a complete Binary Tree, the values are storage in an array by traversing the
+        level-order from left to right.<br />
+        2. The first entry is empty.<br />
+        3. Calculation of children (k index = 2*k,2*k +1): 1 index = 2,3 --> 2 index = 4,5 --> 3 index = 6,7<br />
+        3. Calculation of parent (k parent = k/2): 7 index = 3 (3.5) --> 6 index = 3 --> 5 index = 2 (2.5)<br />
+        Representation of Max Binary Heap:<br />
+        1. The first entry is empty.<br />
+        2. The second entry is the max value in the array (or root of the Binary Tree).<br />
+      </li>
     </ol>
 
 
