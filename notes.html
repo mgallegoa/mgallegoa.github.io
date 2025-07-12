@@ -1,231 +1,331 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Notes</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Personal Notes</title>
-  <link href="css/style.css" rel="stylesheet" />
-</head>
+  <body>
+    <a href="fem/">Front Mentor</a>
+    <ul>
+      <li>Linux:</li>
+      <ol>
+        <li>Show the screen resolution: xrandr -q</li>
+        <li>
+          Program to record OBS Studio : ffmpeg(x11grab for other Display
+          Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v 1M
+          /home/manuel/Documents/telescope-media-file.mp4
+        </li>
+        <li>
+          Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4 output.gif
+        </li>
+      </ol>
+      <li>Develop:</li>
+      <ol>
+        <li>
+          Indentation: Tabs for indentation, spaces for alignment
+          https://lea.verou.me/blog/2012/01/why-tabs-are-clearly-superior/
+        </li>
+        <li>Fonts to develop : DroidSansM Nerd Font</li>
+        <li>
+          font-size: rem width: % in combination with a max-width, ch height:
+          question your self "do i rely need to set height" if yes -> use a
+          min-height padding/margin: rem or em, kevin often uses em for padding
+          of buttons media queries: em. px only for little things like shadows,
+          borders etc.<br />
+          .woff2 fonts<br />
+          https://gwfh.mranftl.com/fonts/finlandica?subsets=latin
+        </li>
+      </ol>
+      <li>Architeture:</li>
+      <ol>
+        <li>MVC: Model View Controller</li>
+        <li>
+          Hexagonal - Adapters and Ports : How to organize the app, separate
+          business logic from others (DB, API, User Interfaces) - Multiples
+          in/out ports<br />
+          4 Parts: 1. Domain (Entities, business logic) 2. Inbound ports
+          (Interfaces) 3. Outbound port (Interfaces DB, email, etc) 4. Adapters,
+          concrete implementations of interfaces
+        </li>
+        <li></li>
+      </ol>
+      <li>Docker:</li>
+      <ol>
+        <li>Show if docker is running well:sudo docker run hello-world</li>
+        <li>
+          Add user to docker group: sudo groupadd docker -> sudo usermod -aG
+          docker $USER -> newgrp docker (to Restart docker group session)
+        </li>
+        <li>Dockerfile ->build (image) -> run (container)</li>
+        <li>docker pull imageName : Download the image but not run it</li>
+        <li>docker build -t imageName . : Create an image from Dockerfile</li>
+        <li>
+          docker run --name myPersonalImageName imageName : Download(if
+          necessary) the image and run it
+        </li>
+        <li>docker run -d imageName : Run in detached mode</li>
+        <li>
+          Run docker in interactive mode docker run -it --rm alpine sh (docker
+          run -it --rm alpine sh -c "apk add --no-cache bash && bash")
+        </li>
+        <li>docker images : show the images, use | head to show the last</li>
+        <li>
+          docker ps : show all images. -a for stopped and running containers
+        </li>
+        <li>
+          docker start idContainer : start a docker stopped container.docker
+          stop idContainer
+        </li>
+        <li>
+          docker logs -f idContainer : show the log for the container. Can use
+          containerName
+        </li>
+        <li>
+          docker exec -it idContainer bash : Run a command in running container
+        </li>
+        <li>
+          docker run -dit --name my_alpine alpine-bash # Run the container in
+          detach mode docker exec -it my_alpine bash # Attach to the container
+        </li>
+        <p />
+        <li>docker logs -f : Show and wait for logs</li>
+        <p />
+        <li>
+          docker run -dp 5000:3000 imageName : Run in port 5000 the app inside
+          container in port 3000
+        </li>
+        <li>
+          docker run -d -v /media/manuel/Datos/:/etc/todos -p 5000:3000
+          imageName : Shared a volume
+        </li>
+        <p />
+        Volumes to develop in container without re-build the image
+        <li>
+          docker run -dp 5555:5174 --name react-ts-list-app -v
+          /media/manuel/Datos/mgallegoa/conceptsProbes/react-ts-list-app/src:/app/react-ts-list-app/src
+          manuelarias/react-ts-list:v1 : Create a container and share a volume
+          for development
+        </li>
 
-<body>
-  <a href="fem/">Front Mentor</a>
-  <ul>
-    <li>Linux:</li>
-    <ol>
-      <li>Show the screen resolution: xrandr -q</li>
-      <li>
-        Program to record OBS Studio : ffmpeg(x11grab for other Display
-        Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v 1M
-        /home/manuel/Documents/telescope-media-file.mp4
-      </li>
-      <li>
-        Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4 output.gif
-      </li>
-    </ol>
-    <li>Develop:</li>
-    <ol>
-      <li>
-        Indentation: Tabs for indentation, spaces for alignment
-        https://lea.verou.me/blog/2012/01/why-tabs-are-clearly-superior/
-      </li>
-      <li>Fonts to develop : DroidSansM Nerd Font</li>
-      <li>
-        font-size: rem width: % in combination with a max-width, ch height:
-        question your self "do i rely need to set height" if yes -> use a
-        min-height padding/margin: rem or em, kevin often uses em for padding
-        of buttons media queries: em. px only for little things like shadows,
-        borders etc.<br />
-        .woff2 fonts<br />
-        https://gwfh.mranftl.com/fonts/finlandica?subsets=latin
-      </li>
-    </ol>
-    <li>Architeture:</li>
-    <ol>
-      <li>
-        MVC: Model View Controller
-      </li>
-      <li>Hexagonal - Adapters and Ports : How to organize the app, separate business logic from others (DB, API, User
-        Interfaces) - Multiples in/out ports<br />
-        4 Parts: 1. Domain (Entities, business logic) 2. Inbound ports (Interfaces) 3. Outbound port (Interfaces DB,
-        email, etc) 4. Adapters, concrete implementations of interfaces
-      </li>
-      <li>
-      </li>
-    </ol>
-    <li>Docker:</li>
-    <ol>
-      <li> Show if docker is running well:sudo docker run hello-world </li>
-      <li>Add user to docker group: sudo groupadd docker -> sudo usermod -aG docker $USER -> newgrp docker (to Restart
-        docker group session) </li>
-      <li>Dockerfile ->build (image) -> run (container)</li>
-      <li>docker pull imageName : Download the image but not run it</li>
-      <li>docker build -t imageName . : Create an image from Dockerfile</li>
-      <li>docker run --name myPersonalImageName imageName : Download(if necessary) the image and run it</li>
-      <li>docker run -d imageName : Run in detached mode</li>
-      <li>Run docker in interactive mode docker run -it --rm alpine sh (docker run -it --rm alpine sh -c "apk add
-        --no-cache bash && bash")</li>
-      <li>docker images : show the images, use | head to show the last</li>
-      <li>docker ps : show all images. -a for stopped and running containers</li>
-      <li>docker start idContainer : start a docker stopped container.docker stop idContainer</li>
-      <li>docker logs -f idContainer : show the log for the container. Can use containerName</li>
-      <li>docker exec -it idContainer bash : Run a command in running container</li>
-      <li>docker run -dit --name my_alpine alpine-bash # Run the container in detach mode
-        docker exec -it my_alpine bash # Attach to the container
-      </li>
-      <p />
-      <li>docker logs -f : Show and wait for logs</li>
-      <p />
-      <li>docker run -dp 5000:3000 imageName : Run in port 5000 the app inside container in port 3000</li>
-      <li>docker run -d -v /media/manuel/Datos/:/etc/todos -p 5000:3000 imageName : Shared a volume</li>
-      <p />
-      Volumes to develop in container without re-build the image
-      <li>docker run -dp 5555:5174 --name react-ts-list-app -v
-        /media/manuel/Datos/mgallegoa/conceptsProbes/react-ts-list-app/src:/app/react-ts-list-app/src
-        manuelarias/react-ts-list:v1 : Create a container and share a volume for development
-      </li>
+        <li>docker builder prune : to purge the docker builder cache</li>
+      </ol>
 
-      <li>docker builder prune : to purge the docker builder cache</li>
-
-
-
-    </ol>
-
-    <li>Asymptotic notation:
-      <ol>Omega(n) notation: the lowest bound (best) of running time</ol>
-      <ol>Theta(o) notation: the average bound (average) of running time</ol>
-      <ol>Big O(O) notation: the upper bound (worse) of running time</ol>
-    </li>
-    <li>Big O, BigO: Asymptotic notation <a
-        href="https://www.youtube.com/watch?v=Mo4vesaut8g&list=WL&index=65&t=22s">Video</a></li>
-    <ol>
-      <li>Time complexity</li>
       <li>
-        Constant: Not scale with the input of the function (take the constant time to get the result). Big O(1)
-      </li>
-      <li>
-        Order of growth:
-        O(1): constant
-        O(log n): logarithmic. log 8=3. n/2. Binary Search
-        O(n): linear
-        O(n log n): linearithmic (Quasilinear). Merge Sort
-        1. Quick Sort : General-purpose, fast.
-        2. Merge Sort : Guaranteed performance.
-        3. Timsort: Nearly sorted data
-        4. Timsort / Merge: Stable + production-ready
-        5. Heap Sort: Low memory use needed
-        O(n2): quadratic (Polynomial algorithm run time). Two loops, one inside other. Fibonacci sequence.
-        O(n3): cubic. Tree loops, one inside other two
-        O(2n): exponential. 2 loops one after other
-        O(n!): factorial
-      </li>
-    </ol>
-
-
-    <li>Data Structures: <a href="https://www.youtube.com/watch?v=8hly31xKli0">Video</a></li>
-    <ol>
-      <li>Arrays: Java Swift are homogeneous [int, int], but python and Js are heterogeneous [int, string]</li>
-      <li>
-        Constant: Not scale with the input of the function (take the constant time to get the result). Big O(1)
-      </li>
-      <li>
-        BogoSort: MonkeySort, bad O(n x n!) <a href="vanillaJS/algorithm_bogoSort.html">Bogo Sort example</a>
-        selectionSort: O(n2)
-        QuickSort: O(n2), best case O(n log n)
-        MergeSort: O(n log n)
-      </li>
-      <li>
-        linearSearch: O(n)
-        binarySearch: O(log n)
-      </li>
-    </ol>
-
-
-    <li>Algorithms:</li>
-    <ol>
-      <li>Golden Rules to solve problems:
+        Asymptotic notation:
         <ol>
-          <li>If the coding problem require search in a O(1), use Set or Map</li>
-          <li>If finding/manipulating/dealing and farthest 'K' element in a given element 'N', try Heap</li>
-          <li>If the problem has a SORTED Array, List or Matrix, use Two Pointer or Binary Search</li>
-          <li>If require trying all Permutations and Combinations, use Backtracking or Breadth First Search</li>
-          <li>If input in the form Tree or Graph, use Tree Traversals or Graph Traversals called Breadth First Search
-            BFS or Depth First Search DFS</li>
-          <li>If is with Single Linked List use Two Pointers or Slow/Fast Pointers</li>
-          <li>If the problem has a recursive solution, use Stack data structure with a loop</li>
-          <li>If the problem is iterating an array with a Time Complexity of O(n2) with Space Complexity of O(1), use
-            HashMap/HashSet. It makes Time Complexity O(n) but Space of O(n)</li>
-          <li>If the problem is iterating an array with a Time Complexity of O(n2) with Space Complexity of O(1), try
-            sort the array. It makes Time Complexity O(n log n) but Space of O(1)</li>
-          <li>If the problem is optimize recursive solution, dynamic programming can be used</li>
-          <li>If the problem has a group of string to manipulation/find/sorting around substring, Tries or HashMap can
-            be used</li>
+          Omega(n) notation: the lowest bound (best) of running time
+        </ol>
+        <ol>
+          Theta(o) notation: the average bound (average) of running time
+        </ol>
+        <ol>
+          Big O(O) notation: the upper bound (worse) of running time
         </ol>
       </li>
       <li>
-        Coding Patterns
+        Big O, BigO: Asymptotic notation
+        <a
+          href="https://www.youtube.com/watch?v=Mo4vesaut8g&list=WL&index=65&t=22s"
+          >Video</a
+        >
+      </li>
+      <ol>
+        <li>Time complexity</li>
+        <li>
+          Constant: Not scale with the input of the function (take the constant
+          time to get the result). Big O(1)
+        </li>
+        <li>
+          Order of growth: O(1): constant O(log n): logarithmic. log 8=3. n/2.
+          Binary Search O(n): linear O(n log n): linearithmic (Quasilinear).
+          Merge Sort 1. Quick Sort : General-purpose, fast. 2. Merge Sort :
+          Guaranteed performance. 3. Timsort: Nearly sorted data 4. Timsort /
+          Merge: Stable + production-ready 5. Heap Sort: Low memory use needed
+          O(n2): quadratic (Polynomial algorithm run time). Two loops, one
+          inside other. Fibonacci sequence. O(n3): cubic. Tree loops, one inside
+          other two O(2n): exponential. 2 loops one after other O(n!): factorial
+        </li>
+      </ol>
+
+      <li>
+        Data Structures:
+        <a href="https://www.youtube.com/watch?v=8hly31xKli0">Video</a>
+      </li>
+      <ol>
+        <li>
+          Arrays: Java Swift are homogeneous [int, int], but python and Js are
+          heterogeneous [int, string]
+        </li>
+        <li>
+          Constant: Not scale with the input of the function (take the constant
+          time to get the result). Big O(1)
+        </li>
+        <li>
+          BogoSort: MonkeySort, bad O(n x n!)
+          <a href="vanillaJS/algorithm_bogoSort.html">Bogo Sort example</a>
+          selectionSort: O(n2) QuickSort: O(n2), best case O(n log n) MergeSort:
+          O(n log n)
+        </li>
+        <li>linearSearch: O(n) binarySearch: O(log n)</li>
+      </ol>
+
+      <li>Algorithms:</li>
+      <ol>
+        <li>
+          Golden Rules to solve problems:
+          <ol>
+            <li>
+              If the coding problem require search in a O(1), use Set or Map
+            </li>
+            <li>
+              If finding/manipulating/dealing and farthest 'K' element in a
+              given element 'N', try Heap
+            </li>
+            <li>
+              If the problem has a SORTED Array, List or Matrix, use Two Pointer
+              or Binary Search
+            </li>
+            <li>
+              If require trying all Permutations and Combinations, use
+              Backtracking or Breadth First Search
+            </li>
+            <li>
+              If input in the form Tree or Graph, use Tree Traversals or Graph
+              Traversals called Breadth First Search BFS or Depth First Search
+              DFS
+            </li>
+            <li>
+              If is with Single Linked List use Two Pointers or Slow/Fast
+              Pointers
+            </li>
+            <li>
+              If the problem has a recursive solution, use Stack data structure
+              with a loop
+            </li>
+            <li>
+              If the problem is iterating an array with a Time Complexity of
+              O(n2) with Space Complexity of O(1), use HashMap/HashSet. It makes
+              Time Complexity O(n) but Space of O(n)
+            </li>
+            <li>
+              If the problem is iterating an array with a Time Complexity of
+              O(n2) with Space Complexity of O(1), try sort the array. It makes
+              Time Complexity O(n log n) but Space of O(1)
+            </li>
+            <li>
+              If the problem is optimize recursive solution, dynamic programming
+              can be used
+            </li>
+            <li>
+              If the problem has a group of string to manipulation/find/sorting
+              around substring, Tries or HashMap can be used
+            </li>
+          </ol>
+        </li>
+        <li>
+          Coding Patterns
+          <ol>
+            <li>
+              Two Pointers: indexes of Array/List. Process two elements at the
+              same time.<br />
+              * Array/List sorted and comparison need between its elements.<br />
+              * Array/List need some certain rearrangement/removal in-place.<br /><br />
+              - Two Sum II - Input Array is Sorted.<br />
+              - Container With Most Water.<br />
+              - Remove duplicate from Sorted Array.<br />
+              - Next permutations.<br />
+              - Trapping Rain Water<br />
+            </li>
+            <li>
+              Fast and Slow Pointers: indexes of Array/List. Two pointers
+              iterate array/list at different speeds.<br />
+              <br />
+              - Linked List Cycle<br />
+              - Middle of the Linked List<br />
+              - Palindrome Linked List<br />
+              - Happy Number<br />
+              - Circular Array Loop<br />
+              Algorithms repository is use to define and implement in different
+              languages
+            </li>
+            <li>
+              Sliding window 1:48 minute: indexes of Array/List. Process two
+              elements at the same time.<br />
+              * Array/List need some certain rearrangement/removal in-place.<br /><br />
+              - Two Sum II - Input Array is Sorted.<br />
+            </li>
+            <li>
+              Find sum of natural numbers: public int sumNaturalNum(int
+              n){return n * (n+1)/2}
+            </li>
+          </ol>
+        </li>
+        <li>MergeSort: O(n log n)</li>
+        <li>
+          linearSearch: O(n)<br />
+          binarySearch: O(log n)
+        </li>
+        <li>
+          Priority Queue: Data Structure allow find the max/min element in
+          constant time, support following operations:<br />
+          1. insert(key)<br />
+          2. deleteMax/deleteMin: remove key<br />
+          3. getMax/getMin: get the key.<br />
+        </li>
+        <li>
+          Complete Binary Tree: Is a Binary Tree where all levels are completed
+          except last level AND last level has a node in such a way that left
+          side is never empty.
+        </li>
+        <li>
+          Representation of Binary Heap:<br />
+          1. Is a complete Binary Tree, the values are storage in an array by
+          traversing the level-order from left to right.<br />
+          2. The first entry is empty.<br />
+          3. Calculation of children (k index = 2*k,2*k +1): 1 index = 2,3 --> 2
+          index = 4,5 --> 3 index = 6,7<br />
+          3. Calculation of parent (k parent = k/2): 7 index = 3 (3.5) --> 6
+          index = 3 --> 5 index = 2 (2.5)<br />
+          Representation of Max Binary Heap:<br />
+          1. The first entry is empty.<br />
+          2. The second entry is the max value in the array (or root of the
+          Binary Tree).<br />
+        </li>
+      </ol>
+
+      <li>
+        Java
         <ol>
-          <li>Two Pointers: indexes of Array/List. Process two elements at the same time.<br />
-            * Array/List sorted and comparison need between its elements.<br />
-            * Array/List need some certain rearrangement/removal in-place.<br /><br />
-            - Two Sum II - Input Array is Sorted.<br />
-            - Container With Most Water.<br />
-            - Remove duplicate from Sorted Array.<br />
-            - Next permutations.<br />
-            - Trapping Rain Water<br />
-          </li>
-          <li>Fast and Slow Pointers: indexes of Array/List. Two pointers iterate array/list at different speeds.<br />
-            <br />
-            - Linked List Cycle<br />
-            - Middle of the Linked List<br />
-            - Palindrome Linked List<br />
-            - Happy Number<br />
-            - Circular Array Loop<br />
-            Algorithms repository is use to define and implement in different languages
-          </li>
-          <li>Sliding window 1:48 minute: indexes of Array/List. Process two elements at the same time.<br />
-            * Array/List need some certain rearrangement/removal in-place.<br /><br />
-            - Two Sum II - Input Array is Sorted.<br />
+          <li>
+            JIT: Just-In-Time Compiler, for efficiency compile bytecode in
+            runtime. JIT compile directly for higher speeds. same time.<br />
           </li>
           <li>
-            Find sum of natural numbers: public int sumNaturalNum(int n){return n * (n+1)/2}
+            ClassLoader: is a subsystem in JVM, first load the file class.<br />
+            <br />
           </li>
-
+          <li>
+            Memory allocation: Java have multiple, five most relevant are:<br />
+            1. Class Memory<br />
+            2. Heap Memory<br />
+            3. Stack Memory<br />
+            4. Program Counter Memory<br />
+            5. Native Method stack Memory<br />
+          </li>
+          <li>
+            Association: relationship that has not ownership over another.<br />
+            Copy Constructor: Initialize an object of the same class.<br />
+            Marker Interface: is empty Interface, examples: Serializable and
+            Clonable. <br />
+            Java is not completely Object Oriented: Use 8 primitive data
+            types.<br />
+            Wrapper Classes are use to convert primitive to Objects.<br />
+          </li>
         </ol>
       </li>
-      <li>
-        MergeSort: O(n log n)
-      </li>
-      <li>
-        linearSearch: O(n)<br />
-        binarySearch: O(log n)
-      </li>
-      <li>
-        Priority Queue: Data Structure allow find the max/min element in constant time, support following
-        operations:<br />
-        1. insert(key)<br />
-        2. deleteMax/deleteMin: remove key<br />
-        3. getMax/getMin: get the key.<br />
-      </li>
-      <li>
-        Complete Binary Tree: Is a Binary Tree where all levels are completed except last level AND last level has a
-        node in such a way that left side is never empty.
-      </li>
-      <li>
-        Representation of Binary Heap:<br />
-        1. Is a complete Binary Tree, the values are storage in an array by traversing the
-        level-order from left to right.<br />
-        2. The first entry is empty.<br />
-        3. Calculation of children (k index = 2*k,2*k +1): 1 index = 2,3 --> 2 index = 4,5 --> 3 index = 6,7<br />
-        3. Calculation of parent (k parent = k/2): 7 index = 3 (3.5) --> 6 index = 3 --> 5 index = 2 (2.5)<br />
-        Representation of Max Binary Heap:<br />
-        1. The first entry is empty.<br />
-        2. The second entry is the max value in the array (or root of the Binary Tree).<br />
-      </li>
-    </ol>
-
-
-  </ul>
-</body>
-
+    </ul>
+  </body>
 </html>
