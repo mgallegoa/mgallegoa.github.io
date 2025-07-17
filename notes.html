@@ -417,6 +417,62 @@
             * DGC Dinamic Garbage Collectors (RMI use DGC): <br />
           </li>
           stream groupingBy.
+        </ol>
+      </li>
+      <li>
+        <b>Spring</b>
+        <ol>
+          <li>
+            @Bean : Are initialize, configure and managed by core container. Are
+            initialize and destroyed with the spring container.<br />
+            * Non-final and non-private.<br />
+            @Component: Class-level annotation to mark as Spring component,
+            Constructor-dependency injection is automatically using @Autowired
+            (Optional if only one constructor).<br />
+            @Repository, @Service and @Controller are meta-annotation and allow
+            further re-fine components to support general architecture
+            principles.<br />
+            * Bean-scope refer to the live-cycle of beans: there are 6 and the
+            Default is singleton: 1) Singleton. 2)Prototype: each time. 3)
+            Request: valid in web context for single http request. 4) Session:
+            valid for http session. 5) Application: for servlet context. 6)
+            Websocket<br />
+            * @PrototypeScope or @Scope("prototype")<br />
+            * Specials spring beans: 1) Environment (dev, test, production). 2)
+            Profile("cloud") can be active declarative in yaml-xml or
+            programmatically<br />
+            * applicationContext.refresh() : Spring refresh the own context<br />
+            * @PropertySource("classpath:database.properties") : Load a file in
+            the folder resources with the name database.properties<br />
+            * @Value("$jdbc.url") annotation inject value in a variable from
+            properties. Also can be use with dynamic expression.<br />
+          </li>
+          <li>
+            DI: Dependency Injection, there are 4 ways: 1) Constructor. 2)
+            Field, direct inject into field declaration (warning for testing) 3)
+            Method, like a normal void method but using @Autowired in the method
+            Spring know the classes passed by parameters are beans. 4) Setter,
+            follow the java naming convention to setAccount(Account acc)<br />
+            * @Qualifier("name1") : Used to name beans and can injected using
+            the name1<br />
+            * @Primary to specify the primary bean and when inject just need to
+            inject in the constructor, automatically know which bean call.<br />
+          </li>
+          <li>
+            Best practices: 1) Split configuration classes. 2) Import
+            configuration: only the needed configuration.<br />
+            * Spring boot: develop spring base app with very less or not
+            configurations. Also provide starters. Auto configure based in the
+            defined starters<br />
+            * Why spring: 1) Standalone apps. 2) Embded server. 3) starters. 4)
+            Auto configuration. 5) production ready feature. 6) No XML
+            configuration
+          </li>
+        </ol>
+      </li>
+      <li>
+        Node
+        <ol>
           <li>
             <b>* Node: Phases of Event loop:</b><br />
             1) Timers: scheduled by timers setTimeout() and setInterval(). 2)
@@ -426,7 +482,10 @@
             if not timers are due. 5) Check: setImmediate(), after I/O. 6) Close
             Callbacks: close resources, eg server.close() socket.close().<br />
             Between phases, runs: 1) process.nexTick() callbacks and 2) Micro
-            tasks (Promises.then and queueMicrotask)<br />
+            tasks
+          </li>
+          <li>
+            (Promises.then and queueMicrotask)<br />
             * Node multi-process using cluster module<br />
             * Node child_process module provides: 1) spawn: for long process,
             streams 2) exec: memory process, < 1MB<br />
