@@ -401,7 +401,37 @@
             Login form made for the programmer using HTML. 3) Digest
             Authentication: similar to basic but with pass encrypted using hash
             formula. 4) Client Certificate Authentication: Each client accessing
-            send a certificate, it requires SSL protocol.
+            send a certificate, it requires SSL protocol.<br />
+            * Garbage Collector: java 7 and before GC live in PermGen but
+            replace in Java 8 by Metaspace (also store classes, not in the
+            heap), GC can reclaim Metaspace.<br />
+            * statics variables in <b>all versions</b> live in the heap.<br />
+            * String live in global pool heap (before java 7 in the PermGen,
+            cause OutOfMemoryError), in heap the GC can clean the string like
+            other object.<br />
+            * RMI: Remote Method Invocation: API allow to call remote methods
+            like local, layers: 1) Application layer: Client and server code. 2)
+            Stub & Skeleton layer: Stub client and Skeleton server. 3) Remote
+            Reference layer: Handle reference to remote object. 4) Transport
+            layer: Use TCP/IP, manage the connection.<br />
+            * DGC Dinamic Garbage Collectors (RMI use DGC): <br />
+          </li>
+          stream groupingBy.
+          <li>
+            <b>* Node: Phases of Event loop:</b><br />
+            1) Timers: scheduled by timers setTimeout() and setInterval(). 2)
+            Pending Callbacks: System level operations like TCP Errors, used by
+            low-level APIs and native bindings. 3) Idle/Prepare(internal):
+            Internal use, prepare poll for I/O. 4) Poll: I/O events, Wait here
+            if not timers are due. 5) Check: setImmediate(), after I/O. 6) Close
+            Callbacks: close resources, eg server.close() socket.close().<br />
+            Between phases, runs: 1) process.nexTick() callbacks and 2) Micro
+            tasks (Promises.then and queueMicrotask)<br />
+            * Node multi-process using cluster module<br />
+            * Node child_process module provides: 1) spawn: for long process,
+            streams 2) exec: memory process, < 1MB<br />
+            * Node reactor patter: Event loop delegate to libuv library for
+            handling I/O events asynchronously, Node work under the hood<br />
           </li>
         </ol>
       </li>
