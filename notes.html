@@ -468,6 +468,40 @@
             Auto configuration. 5) production ready feature. 6) No XML
             configuration
           </li>
+          <li>
+            application.properties: spring.profile.active=dev,test and create a
+            file application-dev.properties <br />
+            * The order of active profile matter: the last file override the
+            duplicate properties<br />
+            * Other way to set properties is using the method
+            setDefaultProperties(Collection.singletonMap("spring.profile.active","dev"))<br />
+            Using the annotation in @Bean @Profile("dev") indicate available
+            only for dev profile. This annotation can apply for class level.<br />
+          </li>
+          <li>
+            REST Representational State Transfer<br />
+            REST defined by Roy Field in 2000 Doctoral dissertation<br />
+            Client-server Architecture<br />
+            Stateless<br />
+            Cache able<br />
+            Layer System<br />
+            Code on Demand(optional)<br />
+            Uniform Interface: 1) Identification of resources. 2) Manipulation
+            of resources through these representations. 3) Selft-descriptive
+            messages. 4) Hipermedia As The Engine Of Application State HATEOS<br />
+            * Should in plural nouns and one send id: GET accounts/1<br />
+            * If nested resource, should be: GET accounts/1/payments/56<br />
+            * GET. PUT. POST. DELETE. PATCH: To update only one part of the
+            entity. OPTIONS: Return the http methods that server support. HEAD:
+            Similar to GET but only respond the header response. <br />
+            * 1XX Informational, 2XX success, 3XX Redirection, 4XX Client Error,
+            5XX Server Error. <br />
+            200 OK, 201 CREATED, 204 NO CONTENT. 304 NOT MODIFIED (If the entity
+            is the same). 400 BAD REQUEST, 401 UNAUTHORIZED, 403 FORBIDDEN (User
+            Not permission), 404 NOT FOUND. 500 INTERNAL SERVER ERROR, 503
+            SERVICE UNAVAILABLE<br />
+            * @ResponseStatus return the code if not error throw.<br />
+          </li>
         </ol>
       </li>
       <li>
