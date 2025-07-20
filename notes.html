@@ -11,17 +11,20 @@
     <a href="fem/">Front Mentor</a>
     <ul>
       <li>Linux:</li>
-      <ol>
-        <li>Show the screen resolution: xrandr -q</li>
-        <li>
-          Program to record OBS Studio : ffmpeg(x11grab for other Display
-          Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v 1M
-          /home/manuel/Documents/telescope-media-file.mp4
-        </li>
-        <li>
-          Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4 output.gif
-        </li>
-      </ol>
+      <li>
+        <ol>
+          <li>Show the screen resolution: xrandr -q</li>
+          <li>
+            Program to record OBS Studio : ffmpeg(x11grab for other Display
+            Servers): example ffmpeg -f xwayland -s 1360x768 -i :0.0 -r 10 -b:v
+            1M /home/manuel/Documents/telescope-media-file.mp4
+          </li>
+          <li>
+            Edit video ShotCut and Convert to gif: ffmpeg -i output.mp4
+            output.gif
+          </li>
+        </ol>
+      </li>
       <li>Develop:</li>
       <ol>
         <li>
@@ -501,6 +504,37 @@
             Not permission), 404 NOT FOUND. 500 INTERNAL SERVER ERROR, 503
             SERVICE UNAVAILABLE<br />
             * @ResponseStatus return the code if not error throw.<br />
+            * @JsonProperty("c-product") case-sensitive and specify the name in
+            the json body.<br />
+            * Java 14 introduce record: default fields are final and add
+            automatically the getters and setters, finalize in Java 16 -->
+            public record ClassName(String name, String phone) {}.<br />
+            * JPA : @Table(name="my_table"): to give a different name.<br />
+            @Id @GeneratedValue(strategy=SEQUENCE): unique and not updatable<br />
+            @Column(unique=true, updatable=false): unique and not updatable<br />
+            * @Query JPA support JPQL Java Persistence Query Language: custom
+            queries. In interface extends JpaRepository create the methods<br />
+            * Example: List<Students /> findAllByFirstNameLike(String firstName)
+            string equal<br />
+            * Example: List<Students /> findAllByFirstNameConaining() any string
+            could be part of the string<br />
+            * First class: @OneToOne(mappedBy="student",cascade=CascadeType.ALL)
+            Second class: @OneToOne @JoinColumn(name="student_id"): Create a
+            column by the one to one relation<br />
+            * @JsonManagedReference : Put in @OneToMany field to prevent cycle
+            in the table references<br />
+            * @JsonBackReference : Put in @ManyToOne field to prevent cycle in
+            the table references<br />
+            * Organize folders: 1) By Features: customers and inside enter all
+            classes related. 2) By Layers: create layers folders and every layer
+            have all the classes related to the layer. 3) By domain DDD
+            (screaming architecture): create business and inside create the
+            layers<br />
+            * Validation from starter jakarta.validation: @Valid : To validate
+            in the controller to perform the validation. In the record put the
+            annotation to validate, for example @NotEmpty(message="message")<br />
+            * ExceptionHandler(MethodArgumentNotValidException.class) to handle
+            the exceptions in a method, return ResponseEntity<br />
           </li>
         </ol>
       </li>
