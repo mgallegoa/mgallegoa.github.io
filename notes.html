@@ -536,6 +536,41 @@
             * ExceptionHandler(MethodArgumentNotValidException.class) to handle
             the exceptions in a method, return ResponseEntity<br />
           </li>
+          <li>
+            Mockito: use the annotations @Mock, @InjectMocks and in the
+            @BeforeEach use MockitoAnnotations.openMocks(this) <br />
+            Mockito.when(exampleMapper.mapper(dto)).thenReturn(newMapDTO)<br />
+            Test multiples calls Mockito.verify(Class,
+            Mockito.timeout(2)).tomethod(dto) to verify the method take 2
+            seconds to execute<br />
+            * @SequenceGenerator(name="my_sequence",
+            sequence_name="my_sequence", initialValue=1, allocationSize=1): To
+            create the sequence if not exist<br />
+            * @TableGenerator(name="my_table_gen", table="table_name",
+            pkColumnName="id_name", valueColumnName="id_value",
+            allocationSize=1): To create the table if not exist<br />
+            * @Column(name="f_name", unique=true, nullable=false, length=50) to
+            set attributes for the column field.<br />
+            * @Entity can stay in 4 states : 1) Transient: Not in the session
+            (save, persist, saveOrUpdate, update). 2) Persistent: In the session
+            (detach, close, clear, evict)(save, saveOrUpdate, merge, lock). 3)
+            Detached: Removed from the session (delete). 4) Removed.<br />
+            * @EqualsAndHashCode(callSuper=true) and @SuperBuilder used in
+            public class Video extends Resource : to implement inheritance<br />
+            * @Polymorphism(type=PolymorphismType.EXPLICIT) : used to load the
+            children for extends class<br />
+            * @Embeddable to declare an embedded entity and use @EmbeddedId for
+            the field to declare the id and in class declaration implements
+            Serializable<br />
+            * It is possible to have an entity extend in many entities with
+            @Embeddable annotation<br />
+            * Query creations: it is possible to create queries using the name
+            convention, for examples: 1) findBy[Property] 2) countAllBy[number
+            Property] 3) deleteAllBy[Property].<br />
+            * Important, Spring JPA can return the type defined in the method:
+            List<users /> findByFirstNameAndLastName(String fn, String ln)<br />
+          </li>
+          record, mapping, test
         </ol>
       </li>
       <li>
