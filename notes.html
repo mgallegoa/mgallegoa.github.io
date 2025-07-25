@@ -571,6 +571,27 @@
             List<users /> findByFirstNameAndLastName(String fn, String ln)<br />
           </li>
           record, mapping, test
+          <li>
+            Sub-types of Inversion of Control : Instead code calling framework,
+            the framework call the code.<br />
+            Here are the main sub-types or patterns of IoC:<br />
+            1. Dependency Injection (DI) : The framework injects dependencies
+            into your class (constructor, setter, or field). Most common form of
+            IoC.<br />
+            2. Service Locator : The object asks a central registry (service
+            locator) for its dependencies. The object still **fetches**, but the
+            **creation logic is centralized**.<br />
+            3. Event-based IoC / Observer : Objects react to **events
+            triggered** by other components or the framework (common in GUI
+            frameworks).<br />
+            4. Template Method Pattern** : A base class defines a **fixed
+            control flow** and lets subclasses **override specific steps**.<br />
+            5. Strategy Pattern** : The behavior (algorithm) is **injected at
+            runtime** — behavior is **decoupled from context**.<br />
+            6. Aspect-Oriented Programming (AOP)** : Cross-cutting concerns
+            (e.g., logging, security) are **injected** into objects at runtime
+            by the framework.<br />
+          </li>
         </ol>
       </li>
       <li>
