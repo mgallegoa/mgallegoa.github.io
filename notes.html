@@ -592,6 +592,26 @@
             (e.g., logging, security) are **injected** into objects at runtime
             by the framework.<br />
           </li>
+          <li>
+            @SpringBootApplication is an alias for the next 3 annotation:<br />
+            1. @Configuration : Mark the class as source definition.<br />
+            2. @ComponentScan : Find an initialize those beans, where to find
+            the packages.<br />
+            3. @EnableAutoConfiguration : Auto configure all base in the
+            class-path.<br />
+            Spring Boot Actuator: Production ready features like:<br />
+            1. Health checks : (/actuator/health).<br />
+            2. Metrics checks : (/actuator/metrics).<br />
+            3. Info checks : (/actuator/info).<br />
+            4. Thread dumps, env variables, beans and more.<br />
+            <br />
+            Exceptions: the best way is use @ControllerAdvice with
+            @ExceptionHandler in a class for Exceptions.<br />
+            Externalized configuration: support properties from application.xml
+            or application.yaml, Command-line args, Environment variables,
+            configured server (Spring Cloud Config) for flexible configuration
+            without modifying code.<br />
+          </li>
         </ol>
       </li>
       <li>
