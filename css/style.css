@@ -173,13 +173,55 @@ h3 {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: space-between;
+  margin-top: 1rem;
 }
-
-.logo_youtube {
+.logo__lab {
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
+  margin-left: 1rem;
+  justify-self: start;
+}
+.logo__lab-img {
+  border: 2px solid white;
+}
+a:focus .logo__lab-img {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border: 2px solid #333;
+  box-shadow: 5px 10px 14px -5px black;
+}
+.logo__lab-link:hover {
+  padding-top: 0rem;
+  padding-bottom: 0.5rem;
+}
+.logo__lab-img:hover {
+  box-shadow: 5px 10px 14px -5px black;
+  transform: scale(1.1);
+}
+.logo__youtube {
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
   justify-self: end;
-  margin-right: 15px;
+  margin-right: 1rem;
   max-width: 33%;
   min-width: 30%;
+}
+.logo__youtube-img {
+  border: 2px solid white;
+}
+a:focus .logo__youtube-img {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border: 2px solid #333;
+  box-shadow: 5px 10px 14px -5px black;
+}
+.logo__youtube-link:hover {
+  padding-top: 0rem;
+  padding-bottom: 0.5rem;
+}
+.logo__youtube-img:hover {
+  box-shadow: 5px 10px 14px -5px black;
+  transform: scale(1.1);
 }
 
 nav {
@@ -356,4 +398,3 @@ nav {
 .social-list__link {
   padding: 0.5em;
 }
-
