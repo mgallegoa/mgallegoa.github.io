@@ -295,7 +295,9 @@ nav {
   box-shadow: var(--bs);
   border-radius: 50%;
 }
-
+.about-me__resume {
+  text-align: center;
+}
 @media (min-width: 600px) {
   .about-me {
     display: grid;
