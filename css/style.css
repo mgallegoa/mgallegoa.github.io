@@ -292,6 +292,7 @@ nav {
   margin: 0 auto;
 }
 .about-me__img {
+  margin: 0 auto;
   box-shadow: var(--bs);
   border-radius: 50%;
 }
