@@ -25,6 +25,143 @@
           </li>
         </ol>
       </li>
+      <li>Architecture:</li>
+      <ol>
+        <li>MVC: Model View Controller</li>
+        <li>
+          Hexagonal - Adapters and Ports : How to organize the app, separate
+          business logic from others (DB, API, User Interfaces) - Multiples
+          in/out ports<br />
+          4 Parts: 1. Domain (Entities, business logic) 2. Inbound ports
+          (Interfaces) 3. Outbound port (Interfaces DB, email, etc) 4. Adapters,
+          concrete implementations of interfaces
+        </li>
+        <li>
+          ACID:<br />
+          Atomicity -> completely succeeds or completely fails.<br />
+          Consistency -> from valid state to other valid state<br />
+          Isolation -> isolate from other transactions<br />
+          Durability -> data remain in case of system failure<br />
+        </li>
+        <li>
+          Load Balance: important Health Check, the strategies are: <br />
+          1. Round Robin -> Simple, rotate the asignation.<br />
+          2. Least Connection -> send to the less server connection number<br />
+          3. Least Response Time -> Focus in resonseness of the server, send to
+          high response, then middle response and last to the low response.<br />
+          4. Ip Hash -> Based in the Ip of the client.<br />
+          5. Weighted Algorithms -> Based in the capacity of the server,
+          assigned a weight for each server, example: 32, 16 , 32.<br />
+          6. Geographical Algorithms -> Based location of the client.<br />
+          7. Consistent Hashing -> Use hash of the client Ip and circuit server
+          chose the near server to direct.<br />
+        </li>
+      </ol>
+      <li>System design:</li>
+      <ol>
+        <li>
+          Infrastructure & Scaling Single Server Setup: A basic architecture
+          where the application, database, and cache reside on a single machine.
+        </li>
+        <li>
+          SQL Databases: Relational databases (e.g., PostgreSQL, MySQL) that use
+          structured tables and support complex joins and ACID transactions.
+        </li>
+        <li>
+          NoSQL Databases: Flexible, non-relational databases (e.g., MongoDB,
+          Redis) designed for unstructured data and high-speed access.
+        </li>
+        <li>
+          Vertical Scaling: Scaling by adding more power (CPU, RAM) to an
+          existing server.
+        </li>
+        <li>
+          Horizontal Scaling: Scaling by adding more servers to distribute the
+          load.
+        </li>
+        <li>
+          Load Balancing: A component that distributes incoming traffic across
+          multiple servers to prevent any single server from becoming a
+          bottleneck.
+        </li>
+        <li>
+          Round Robin: A load balancing algorithm that sends requests to servers
+          in a sequential, rotating order.
+        </li>
+        <li>
+          Health Checks: Monitoring mechanisms used by load balancers to ensure
+          traffic is only sent to healthy, active servers.
+        </li>
+        <li>
+          Single Point of Failure (SPOF): A critical part of a system that, if
+          it fails, causes the entire system to stop functioning.
+        </li>
+        <li>
+          API Design & Communication API (Application Programming Interface): A
+          contract that defines how software components interact and request
+          data from one another.
+        </li>
+        <li>
+          RESTful APIs: An architectural style using standard HTTP methods (GET,
+          POST, PUT, DELETE) to manage resources as nouns.
+        </li>
+        <li>
+          GraphQL: A query language that allows clients to request exactly the
+          data they need from a single endpoint, reducing over-fetching.
+        </li>
+        <li>
+          gRPC: A high-performance remote procedure call framework often used
+          for microservices communication.
+        </li>
+        <li>
+          HTTP/HTTPS: Protocols used for data communication; HTTPS adds
+          encryption for security.
+        </li>
+        <li>
+          WebSockets : A protocol enabling full-duplex, real-time, bidirectional
+          communication.
+        </li>
+        <li>
+          TCP: A reliable, connection-oriented transport protocol that ensures
+          data integrity.
+        </li>
+        <li>
+          UDP: A faster, connectionless transport protocol that prioritizes
+          speed over guaranteed delivery.
+        </li>
+        <li>
+          Security & Access Control Authentication : The process of verifying
+          the identity of a user or service (e.g., login).
+        </li>
+        <li>
+          JWT (JSON Web Tokens): A standard format for securely transmitting
+          information as a JSON object, often used for stateless authentication.
+        </li>
+        <li>
+          OAuth 2.0: An authorization framework that allows third-party services
+          to access resources without sharing credentials.
+        </li>
+        <li>
+          OpenID Connect: An identity layer built on top of OAuth 2.0 used for
+          authentication.
+        </li>
+        <li>
+          Authorization: The process of determining what an authenticated user
+          is permitted to do (permissions).
+        </li>
+        <li>
+          RBAC (Role-Based Access Control): Managing access based on assigned
+          roles (e.g., Admin, User).
+        </li>
+        <li>
+          ABAC (Attribute-Based Access Control): Managing access based on
+          attributes of the user, resource, or environment.
+        </li>
+        <li>
+          ACLs (Access Control Lists): A list attached to a resource that
+          specifies which users have access and what their permissions are.
+        </li>
+      </ol>
       <li>Develop:</li>
       <ol>
         <li>
@@ -42,19 +179,7 @@
           https://gwfh.mranftl.com/fonts/finlandica?subsets=latin
         </li>
       </ol>
-      <li>Architeture:</li>
-      <ol>
-        <li>MVC: Model View Controller</li>
-        <li>
-          Hexagonal - Adapters and Ports : How to organize the app, separate
-          business logic from others (DB, API, User Interfaces) - Multiples
-          in/out ports<br />
-          4 Parts: 1. Domain (Entities, business logic) 2. Inbound ports
-          (Interfaces) 3. Outbound port (Interfaces DB, email, etc) 4. Adapters,
-          concrete implementations of interfaces
-        </li>
-        <li></li>
-      </ol>
+
       <li>Docker:</li>
       <ol>
         <li>Show if docker is running well:sudo docker run hello-world</li>
@@ -731,6 +856,40 @@
               <li>Review, CodeRabbit: Catches edge cases missed.</li>
             </ol>
             <br />
+          </li>
+        </ol>
+      </li>
+      <li>
+        SDD: Spec-Driven Development
+        <ol>
+          <li>Construction: One time by project, define general rules.</li>
+          <li>
+            Specify: What will be build, (the feature), acceptances criteria.
+          </li>
+          <li>Plan: who to build (technical rules, files, data)</li>
+          <li>Tasks: Plan divided in small task, one by one.</li>
+          <li>Implement: The agent execute the tasks one by one.</li>
+          <li>
+            Verify: Validate with the acceptances criteria. If fails, execute
+            again.
+          </li>
+          <li>
+            my-project<br />
+            |---spec<br />
+            _____|---constitution <br />
+            __________|---mision.md (what we build and for who)<br />
+            __________|---tech-stack.md (tech and conventions)<br />
+            __________|---roadmap.md (features order)<br />
+            _____|---features<br />
+            __________|---001-task<br />
+            _______________|---spec.md (what is for this feature)<br />
+            _______________|---plan.md (how to implement)<br />
+            _______________|---task.md (task checklist)<br />
+            __________|---002-task<br />
+            _______________|---spec.md<br />
+            _______________|---plan.md<br />
+            _______________|---task.md<br />
+            |---code (the code generated by the agent)<br />
           </li>
         </ol>
       </li>
